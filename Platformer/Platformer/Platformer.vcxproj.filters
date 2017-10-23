@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Backgrounds">
+      <UniqueIdentifier>{0a804482-a127-46d6-8ad4-f1324b9681c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Fonts">
+      <UniqueIdentifier>{06a33a8c-a3e0-4650-b3b3-dfbadaaae40b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Overlays">
+      <UniqueIdentifier>{a8194317-c46a-42e1-9e15-0eef02eeb038}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sounds">
+      <UniqueIdentifier>{867c118b-e598-4bac-b60a-5e28940323b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites">
+      <UniqueIdentifier>{c04940f4-7bdb-4658-b7e6-206edc5404bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Tiles">
+      <UniqueIdentifier>{d30494d1-0ee3-4035-be38-b1d26344d6a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\MonsterA">
+      <UniqueIdentifier>{1f2f0bbf-2cec-47ff-97aa-8b1786cd5040}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\MonsterB">
+      <UniqueIdentifier>{b7298f1e-fb61-4a73-81aa-4c59407b61fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\MonsterC">
+      <UniqueIdentifier>{9cbdc144-cb1b-4b27-ae8e-323a7b1cd02f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\MonsterD">
+      <UniqueIdentifier>{42ad4fdb-33a7-414b-af7b-3732691a49e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\Player">
+      <UniqueIdentifier>{170c0d34-ef94-4b38-ae1a-1597bc683d42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Testeur.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneTitre.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneNiveau1.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Joueur.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Textbox.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Testeur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneTitre.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneNiveau1.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Joueur.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Textbox.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Ressources\Backgrounds\Layer0_0.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer0_1.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer0_2.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer1_0.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer1_1.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer1_2.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer2_0.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer2_1.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Backgrounds\Layer2_2.png">
+      <Filter>Fichiers de ressources\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Overlays\you_died.png">
+      <Filter>Fichiers de ressources\Overlays</Filter>
+    </Image>
+    <Image Include="Ressources\Overlays\you_lose.png">
+      <Filter>Fichiers de ressources\Overlays</Filter>
+    </Image>
+    <Image Include="Ressources\Overlays\you_win.png">
+      <Filter>Fichiers de ressources\Overlays</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockA0.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockA1.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockA2.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockA3.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockA4.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockA5.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockA6.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockB0.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\BlockB1.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\Exit.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Tiles\Platform.png">
+      <Filter>Fichiers de ressources\Tiles</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Gem.png">
+      <Filter>Fichiers de ressources\Sprites</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterA\Idle.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterA</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterA\Run.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterA</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterB\Idle.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterB</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterB\Run.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterB</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterC\Idle.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterC</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterC\Run.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterC</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterD\Idle.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterD</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\MonsterD\Run.png">
+      <Filter>Fichiers de ressources\Sprites\MonsterD</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Player\Celebrate.png">
+      <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Player\Die.png">
+      <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Player\Idle.png">
+      <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Player\Jump.png">
+      <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Player\Run.png">
+      <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Title.png">
+      <Filter>Fichiers de ressources\Sprites</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Player\Player.png">
+      <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Ressources\Fonts\Peric.ttf">
+      <Filter>Fichiers de ressources\Fonts</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ressources\Sounds\ExitReached.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+    <None Include="Ressources\Sounds\GemCollected.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+    <None Include="Ressources\Sounds\MonsterKilled.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+    <None Include="Ressources\Sounds\Music.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+    <None Include="Ressources\Sounds\PlayerFall.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+    <None Include="Ressources\Sounds\PlayerJump.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+    <None Include="Ressources\Sounds\PlayerKilled.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+    <None Include="Ressources\Sounds\Powerup.ogg">
+      <Filter>Fichiers de ressources\Sounds</Filter>
+    </None>
+  </ItemGroup>
+</Project>

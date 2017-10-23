@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{bbb442e7-9da8-4435-9fe5-fe7adefc99bb}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Platformer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(SFML_ROOT)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SFML_ROOT)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(SFML_ROOT)\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SFML_ROOT)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-network-d.lib;sfml-window-d.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /d /y "$(SFML_ROOT)\bin\Debug\*.*" "..\Debug\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>sfml-system.lib;sfml-main.lib;sfml-graphics.lib;sfml-audio.lib;sfml-network.lib;sfml-window.lib;openal32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /d /y "$(SFML_ROOT)\bin\Release\*.*" "..\Release\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Joueur.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SceneNiveau1.cpp" />
+    <ClCompile Include="SceneTitre.cpp" />
+    <ClCompile Include="Testeur.cpp" />
+    <ClCompile Include="Textbox.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Joueur.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneNiveau1.h" />
+    <ClInclude Include="SceneTitre.h" />
+    <ClInclude Include="Testeur.h" />
+    <ClInclude Include="Textbox.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Ressources\Backgrounds\Layer0_0.png" />
+    <Image Include="Ressources\Backgrounds\Layer0_1.png" />
+    <Image Include="Ressources\Backgrounds\Layer0_2.png" />
+    <Image Include="Ressources\Backgrounds\Layer1_0.png" />
+    <Image Include="Ressources\Backgrounds\Layer1_1.png" />
+    <Image Include="Ressources\Backgrounds\Layer1_2.png" />
+    <Image Include="Ressources\Backgrounds\Layer2_0.png" />
+    <Image Include="Ressources\Backgrounds\Layer2_1.png" />
+    <Image Include="Ressources\Backgrounds\Layer2_2.png" />
+    <Image Include="Ressources\Overlays\you_died.png" />
+    <Image Include="Ressources\Overlays\you_lose.png" />
+    <Image Include="Ressources\Overlays\you_win.png" />
+    <Image Include="Ressources\Sprites\Gem.png" />
+    <Image Include="Ressources\Sprites\MonsterA\Idle.png" />
+    <Image Include="Ressources\Sprites\MonsterA\Run.png" />
+    <Image Include="Ressources\Sprites\MonsterB\Idle.png" />
+    <Image Include="Ressources\Sprites\MonsterB\Run.png" />
+    <Image Include="Ressources\Sprites\MonsterC\Idle.png" />
+    <Image Include="Ressources\Sprites\MonsterC\Run.png" />
+    <Image Include="Ressources\Sprites\MonsterD\Idle.png" />
+    <Image Include="Ressources\Sprites\MonsterD\Run.png" />
+    <Image Include="Ressources\Sprites\Player\Celebrate.png" />
+    <Image Include="Ressources\Sprites\Player\Die.png" />
+    <Image Include="Ressources\Sprites\Player\Idle.png" />
+    <Image Include="Ressources\Sprites\Player\Jump.png" />
+    <Image Include="Ressources\Sprites\Player\Player.png" />
+    <Image Include="Ressources\Sprites\Player\Run.png" />
+    <Image Include="Ressources\Sprites\Title.png" />
+    <Image Include="Ressources\Tiles\BlockA0.png" />
+    <Image Include="Ressources\Tiles\BlockA1.png" />
+    <Image Include="Ressources\Tiles\BlockA2.png" />
+    <Image Include="Ressources\Tiles\BlockA3.png" />
+    <Image Include="Ressources\Tiles\BlockA4.png" />
+    <Image Include="Ressources\Tiles\BlockA5.png" />
+    <Image Include="Ressources\Tiles\BlockA6.png" />
+    <Image Include="Ressources\Tiles\BlockB0.png" />
+    <Image Include="Ressources\Tiles\BlockB1.png" />
+    <Image Include="Ressources\Tiles\Exit.png" />
+    <Image Include="Ressources\Tiles\Platform.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Ressources\Fonts\Peric.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Ressources\Sounds\ExitReached.ogg" />
+    <None Include="Ressources\Sounds\GemCollected.ogg" />
+    <None Include="Ressources\Sounds\MonsterKilled.ogg" />
+    <None Include="Ressources\Sounds\Music.ogg" />
+    <None Include="Ressources\Sounds\PlayerFall.ogg" />
+    <None Include="Ressources\Sounds\PlayerJump.ogg" />
+    <None Include="Ressources\Sounds\PlayerKilled.ogg" />
+    <None Include="Ressources\Sounds\Powerup.ogg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
