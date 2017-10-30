@@ -1,5 +1,6 @@
 #include "Joueur.h"
-
+// <smasson>
+// </smasson>
 using namespace platformer;
 
 Joueur::Joueur() : persoRect(0, 0, TAILLE_RECT, TAILLE_RECT)
@@ -10,12 +11,29 @@ Joueur::~Joueur()
 {
 }
 
-bool Joueur::init(const int limiteGauche, const int limiteDroite, const String texturePath)
+bool Joueur::init(const int limiteGauche, const int limiteDroite, const String texturePath, const String runAnimPath, const String idleAnimPath)
 {
 	if (!texture.loadFromFile(texturePath))
 	{
 		return false;
 	}
+    // <smasson>
+    if (!runAnimTexture.loadFromFile(runAnimPath))
+    {
+        return false;
+    }
+    if (!idleAnimTexture.loadFromFile(idleAnimPath))
+    {
+        return false;
+    }
+
+    /*Ici, l'ordre d'appel est important et est dépendant de l'enum: Animations*/
+    /*IDLE = 0, RUN_LEFT = 1, RUN_RIGHT= 2, JUMP = 3, DIE = 4*/
+    /*//*/
+    animator.AddAnim(idleAnimTexture);
+    animator.AddAnim(runAnimTexture);
+    animator.AddAnim(runAnimTexture);
+    // </smasson>
 
 	setTexture(texture);
 	setTextureRect(persoRect);
@@ -27,16 +45,47 @@ bool Joueur::init(const int limiteGauche, const int limiteDroite, const String t
 	return true;
 }
 
+void Joueur::Update()
+{
+    // <smasson>
+    /*Updater l'animateur*/
+    animator.Update();
+    /*Updater la texture*/
+    setTexture(animator.GetCurAnimTexture());
+    setTextureRect(animator.GetCurAnimRect());
+    // </smasson>
+}
+
 void Joueur::move(const int direction)
 {
 	if (direction == 1)
 	{
 		Sprite::move(vitesse, 0);
+        // <smasson>
+        /*Jouer à droite(anim)*/
+        animator.PlayAnim(RUN_RIGHT, 0.09f);
+        setScale(-1, 1);
+        // </smasson>
 	}
 	else if (direction == -1)
 	{
 		Sprite::move(-vitesse, 0);
+        // <smasson>
+        /*Jouer à gauche(anim)*/
+        animator.PlayAnim(RUN_LEFT, 0.09f);
+        setScale(1, 1);
+        // </smasson>
 	}
+
+    // <smasson>
+
+    /*Sinon, nous ne bougeons pas, donc aller en Idle*/
+    else
+    {
+        /*Jouer l'IDLE*/
+        animator.PlayAnim(IDLE, 0.0f);
+    }
+    // </smasson>
 
 	//Test sur les limites de l'écran
 	if (getPosition().x < limiteGauche)

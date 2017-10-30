@@ -1,0 +1,10 @@
+Classes:
+
+Player:
+Possède un singleton.Le joueur est contrôlable. Il est soumis aux effets de gravité.
+
+
+Ennemy:
+Est généré par une fabrique statique.L'ennemi se déplace. L'ennemi patrouille.
+L'ennemi explore. L'ennemi détecte le joueur. L'ennemi est soumis aux effets de gravité.
+L'ennemi peut mourir. L'ennemi peut attaquer. L'ennemi peut dropper une autre sprite.
