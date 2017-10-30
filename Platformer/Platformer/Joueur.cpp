@@ -30,9 +30,9 @@ bool Joueur::Init(const int limiteGauche, const int limiteDroite, const String t
     /*Ici, l'ordre d'appel est important et est dépendant de l'enum: Animations*/
     /*IDLE = 0, RUN_LEFT = 1, RUN_RIGHT= 2, JUMP = 3, DIE = 4*/
     /*//*/
-    animator.AddAnim(idleAnimTexture);
+    /*animator.AddAnim(idleAnimTexture);
     animator.AddAnim(runAnimTexture);
-    animator.AddAnim(runAnimTexture);
+    animator.AddAnim(runAnimTexture);*/
     // </smasson>
 
 	setTexture(texture);
@@ -57,8 +57,8 @@ void Joueur::move(const int direction)
 		Sprite::move(vitesse, 0);
         // <smasson>
         /*Jouer à droite(anim)*/
-        animator.PlayAnim(RUN_RIGHT, 0.09f);
-        setScale(-1, 1);
+        /*animator.PlayAnim(RUN_RIGHT, 0.09f);
+        setScale(-1, 1);*/
         // </smasson>
 	}
 	// Gauche
@@ -67,8 +67,8 @@ void Joueur::move(const int direction)
 		Sprite::move(-vitesse, 0);
         // <smasson>
         /*Jouer à gauche(anim)*/
-        animator.PlayAnim(RUN_LEFT, 0.09f);
-        setScale(1, 1);
+        /*animator.PlayAnim(RUN_LEFT, 0.09f);
+        setScale(1, 1);*/
         // </smasson>
 	}
 	// Bas
@@ -88,7 +88,7 @@ void Joueur::move(const int direction)
     else
     {
         /*Jouer l'IDLE*/
-        animator.PlayAnim(IDLE, 0.0f);
+        /*animator.PlayAnim(IDLE, 0.0f);*/
     }
     // </smasson>
 
@@ -115,11 +115,11 @@ void Joueur::Jump()
 void Joueur::Update()
 {
     // <smasson>
-    /*Updater l'animateur*/
-    animator.Update();
-    /*Updater la texture*/
-    setTexture(animator.GetCurAnimTexture());
-    setTextureRect(animator.GetCurAnimRect());
+    //Updater l'animateur
+    //animator.Update();
+    //Updater la texture
+    //setTexture(animator.GetCurAnimTexture());
+    //setTextureRect(animator.GetCurAnimRect());
     // </smasson>
 
 	if (isJumping)

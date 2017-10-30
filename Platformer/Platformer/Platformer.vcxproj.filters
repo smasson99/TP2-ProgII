@@ -31,20 +31,80 @@
     <Filter Include="Fichiers de ressources\Tiles">
       <UniqueIdentifier>{d30494d1-0ee3-4035-be38-b1d26344d6a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers de ressources\Sprites\MonsterA">
-      <UniqueIdentifier>{1f2f0bbf-2cec-47ff-97aa-8b1786cd5040}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers de ressources\Sprites\MonsterB">
-      <UniqueIdentifier>{b7298f1e-fb61-4a73-81aa-4c59407b61fe}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers de ressources\Sprites\MonsterC">
-      <UniqueIdentifier>{9cbdc144-cb1b-4b27-ae8e-323a7b1cd02f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Fichiers de ressources\Sprites\MonsterD">
-      <UniqueIdentifier>{42ad4fdb-33a7-414b-af7b-3732691a49e0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers de ressources\Sprites\Player">
       <UniqueIdentifier>{170c0d34-ef94-4b38-ae1a-1597bc683d42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll">
+      <UniqueIdentifier>{fc467fab-4956-4926-9df8-9b45bccbbd17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll">
+      <UniqueIdentifier>{ab307f61-3b06-4517-92d7-6e527387143b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll">
+      <UniqueIdentifier>{8d10712c-4d4d-4e2e-806e-fd7b0942d6b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll\Attak">
+      <UniqueIdentifier>{958acd15-81a2-48eb-8a55-8c8332e9f8bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll\Die">
+      <UniqueIdentifier>{b24398d2-d017-4b36-bd74-f9496cd2a7c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll\Hurt">
+      <UniqueIdentifier>{389eefb8-44d0-4b4a-99af-559a66adb863}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll\Idle">
+      <UniqueIdentifier>{101a5b20-bc58-4c78-8ed7-857f78253e3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll\Jump">
+      <UniqueIdentifier>{ba51f2b7-05e5-4ff4-af87-31ea9755c198}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll\Run">
+      <UniqueIdentifier>{71675883-3bcb-4479-9e11-970f4bf6b947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Troll\Walk">
+      <UniqueIdentifier>{c7eb0018-a660-47f4-ac3b-9de3d04b6efd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll\Attak">
+      <UniqueIdentifier>{6423e5ce-9a6a-4ff7-afc0-5e1a0d752f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll\Die">
+      <UniqueIdentifier>{4f350b77-458b-47cf-add6-38cd9e316b4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll\Hurt">
+      <UniqueIdentifier>{b14b0981-1dc7-47e2-9936-67d1a1b84b70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll\Idle">
+      <UniqueIdentifier>{baeae8d8-3a05-4135-8e5f-e5acbb852501}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll\Jump">
+      <UniqueIdentifier>{ae64213a-6f42-4741-a91f-9527eb83488f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll\Walk">
+      <UniqueIdentifier>{f5b25e9d-0052-4e57-8bd6-ef356c1e4c74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Troll\Run">
+      <UniqueIdentifier>{5b40ff25-65bf-49d9-83fb-90cbc9e98637}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll\Attak">
+      <UniqueIdentifier>{b3c3ecbb-f9ee-4cda-8a3e-9b6811ee424e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll\Die">
+      <UniqueIdentifier>{eedae9bd-2733-4ad0-8cc0-160beda60662}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll\Hurt">
+      <UniqueIdentifier>{d4099118-4660-42cc-91d8-41ffbe80d85c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll\Idle">
+      <UniqueIdentifier>{1f54ca1e-65f1-4526-8377-a4d884e30f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll\Jump">
+      <UniqueIdentifier>{a37c538a-3162-4294-a0b4-b3a608dac52d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll\Run">
+      <UniqueIdentifier>{a6a1588c-e963-411b-9d22-eb782a88e959}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Troll\Walk">
+      <UniqueIdentifier>{5257b334-e086-4b6c-8016-cd38c670c4b8}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -181,33 +241,6 @@
     <Image Include="Ressources\Tiles\Platform.png">
       <Filter>Fichiers de ressources\Tiles</Filter>
     </Image>
-    <Image Include="Ressources\Sprites\Gem.png">
-      <Filter>Fichiers de ressources\Sprites</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterA\Idle.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterA</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterA\Run.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterA</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterB\Idle.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterB</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterB\Run.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterB</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterC\Idle.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterC</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterC\Run.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterC</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterD\Idle.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterD</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\MonsterD\Run.png">
-      <Filter>Fichiers de ressources\Sprites\MonsterD</Filter>
-    </Image>
     <Image Include="Ressources\Sprites\Player\Celebrate.png">
       <Filter>Fichiers de ressources\Sprites\Player</Filter>
     </Image>
@@ -228,6 +261,447 @@
     </Image>
     <Image Include="Ressources\Sprites\Player\Player.png">
       <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_000.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_001.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_002.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_003.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_004.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_005.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_006.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\DIE\DIE_000.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\DIE\DIE_001.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\DIE\DIE_002.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\DIE\DIE_003.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\DIE\DIE_004.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\DIE\DIE_005.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\DIE\DIE_006.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_000.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_001.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_002.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_003.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_004.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_005.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_006.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_000.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_001.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_002.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_003.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_004.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_005.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_006.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_000.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_001.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_002.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_003.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_004.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_005.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_006.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_000.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_001.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_002.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_003.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_004.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_005.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_006.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_000.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_001.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_002.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_003.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_004.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_005.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_006.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_000.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_001.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_002.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_003.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_004.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_005.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_006.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\DIE\DIE_000.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\DIE\DIE_001.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\DIE\DIE_002.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\DIE\DIE_003.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\DIE\DIE_004.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\DIE\DIE_005.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\DIE\DIE_006.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\HURT\HURT_000.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\HURT\HURT_001.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\HURT\HURT_002.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\HURT\HURT_003.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\HURT\HURT_004.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\HURT\HURT_005.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\HURT\HURT_006.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\IDLE\IDLE_000.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\IDLE\IDLE_001.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\IDLE\IDLE_002.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\IDLE\IDLE_003.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\IDLE\IDLE_004.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\IDLE\IDLE_005.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\IDLE\IDLE_006.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\JUMP\JUMP_000.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\JUMP\JUMP_001.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\JUMP\JUMP_002.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\JUMP\JUMP_003.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\JUMP\JUMP_004.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\JUMP\JUMP_005.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\JUMP\JUMP_006.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\RUN\RUN_000.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\RUN\RUN_001.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\RUN\RUN_002.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\RUN\RUN_003.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\RUN\RUN_004.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\RUN\RUN_005.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\RUN\RUN_006.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_000.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_001.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_002.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_003.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_004.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_005.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_006.png">
+      <Filter>Fichiers de ressources\Sprites\2_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_000.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_001.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_002.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_003.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_004.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_005.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_006.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Attak</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\DIE\DIE_000.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\DIE\DIE_001.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\DIE\DIE_002.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\DIE\DIE_003.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\DIE\DIE_004.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\DIE\DIE_005.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\DIE\DIE_006.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\HURT\HURT_000.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\HURT\HURT_001.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\HURT\HURT_002.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\HURT\HURT_003.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\HURT\HURT_004.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\HURT\HURT_005.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\HURT\HURT_006.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\IDLE\IDLE_000.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\IDLE\IDLE_001.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\IDLE\IDLE_002.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\IDLE\IDLE_003.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\IDLE\IDLE_004.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\IDLE\IDLE_005.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\IDLE\IDLE_006.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\JUMP\JUMP_000.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\JUMP\JUMP_001.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\JUMP\JUMP_002.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\JUMP\JUMP_003.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\JUMP\JUMP_004.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\JUMP\JUMP_005.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\JUMP\JUMP_006.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_000.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_001.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_002.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_003.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_004.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_005.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_006.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_000.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_001.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_002.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_003.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_004.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_005.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_006.png">
+      <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
