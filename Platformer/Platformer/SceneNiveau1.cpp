@@ -54,7 +54,7 @@ bool SceneNiveau1::init(RenderWindow * const window)
 		}
 	}
 
-	if (!joueur.Init(0, window->getSize().x, "Ressources\\Sprites\\Player\\Player.png"))
+	if (!joueur.Init(0, window->getSize().x, "Ressources\\Sprites\\Player\\Player.png", "Ressources\\Sprites\\Player\\Run.png", "Ressources\\Sprites\\Player\\Idle.png"))
 	{
 		return false;
 	}
@@ -172,6 +172,12 @@ void SceneNiveau1::getInputs()
 	{
 		interfaceCommande |= 4;
 	}
+	// <smasson>
+    else
+    {
+        interfaceCommande |= 0;
+    }
+	// </smasson>
 }
 
 void SceneNiveau1::update()
@@ -188,7 +194,11 @@ void SceneNiveau1::update()
 	{
 		joueur.Jump();
 	}
-	joueur.Update();
+    else if (interfaceCommande == 0)
+    {
+        joueur.move(0);
+    }
+    joueur.Update();
 }
 
 void SceneNiveau1::draw()

@@ -1,5 +1,9 @@
 #pragma once
 #include "RectCollider.h"
+
+#include <SFML/Graphics.hpp>
+#include "ObjectAnimator.h"
+
 using namespace sf;
 
 /// <summary>
@@ -25,7 +29,19 @@ namespace platformer
 	public:
 		Joueur();
 		~Joueur();
+        // <smasson>
+        static enum Animations
+        {
+            IDLE,
+            RUN_LEFT,
+            RUN_RIGHT,
+            JUMP,
+            DIE
+        };
+        void Update();
+        // </smasson>
 		void move(const int direction);
+		bool init(const int limiteGauche, const int limiteDroite, const String texturePath, const String runAnimPath, const String idleAnimPath);
 		void Jump();
 		void Update();
 		void Gravite();
@@ -35,7 +51,14 @@ namespace platformer
 
 		Texture texture;
 
-		IntRect persoRect;
+        // <smasson>
+        Texture runAnimTexture;
+        Texture idleAnimTexture;
+
+        ObjectAnimator animator;
+        // </smasson>
+		
+        IntRect persoRect;
 		float vitesse = 3;
 		float limiteGauche;
 		float limiteDroite;
