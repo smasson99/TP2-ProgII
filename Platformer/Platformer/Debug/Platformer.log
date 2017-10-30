@@ -1,6 +1,7 @@
 ﻿  Joueur.cpp
-d:\tp2-progii_v2\tp2-progii\platformer\platformer\joueur.cpp(24): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
-d:\tp2-progii_v2\tp2-progii\platformer\platformer\joueur.cpp(25): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
-  Platformer.vcxproj -> D:\TP2-ProgII_v2\TP2-ProgII\Platformer\Debug\Platformer.exe
-  Platformer.vcxproj -> D:\TP2-ProgII_v2\TP2-ProgII\Platformer\Debug\Platformer.pdb (Full PDB)
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.h(41): warning C4091: 'static ' : ignoré à gauche de 'platformer::Joueur::Animations' quand aucune variable n'est déclarée
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.cpp(42): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.cpp(43): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+  Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.exe
+  Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.pdb (Partial PDB)
   0 fichier(s) copié(s)

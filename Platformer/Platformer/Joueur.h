@@ -1,8 +1,9 @@
 #pragma once
 #include "RectCollider.h"
-
+// <smasson>
 #include <SFML/Graphics.hpp>
 #include "ObjectAnimator.h"
+// </smasson>
 
 using namespace sf;
 
@@ -38,14 +39,12 @@ namespace platformer
             JUMP,
             DIE
         };
-        void Update();
         // </smasson>
 		void move(const int direction);
-		bool init(const int limiteGauche, const int limiteDroite, const String texturePath, const String runAnimPath, const String idleAnimPath);
+		bool Init(const int limiteGauche, const int limiteDroite, const String texturePath, const String runAnimPath, const String idleAnimPath);
 		void Jump();
 		void Update();
 		void Gravite();
-		bool Init(const int limiteGauche, const int limiteDroite, const String texturePath);
 	private:
 		static const int TAILLE_RECT = 64;
 

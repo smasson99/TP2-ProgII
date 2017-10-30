@@ -1,7 +1,6 @@
 #include "Joueur.h"
 #include <iostream>
-// <smasson>
-// </smasson>
+
 using namespace platformer;
 
 Joueur::Joueur() : persoRect(0, 0, TAILLE_RECT, TAILLE_RECT)
@@ -48,17 +47,6 @@ bool Joueur::Init(const int limiteGauche, const int limiteDroite, const String t
 	jumpTime = milliseconds(1400);
 
 	return true;
-}
-
-void Joueur::Update()
-{
-    // <smasson>
-    /*Updater l'animateur*/
-    animator.Update();
-    /*Updater la texture*/
-    setTexture(animator.GetCurAnimTexture());
-    setTextureRect(animator.GetCurAnimRect());
-    // </smasson>
 }
 
 void Joueur::move(const int direction)
@@ -114,6 +102,7 @@ void Joueur::move(const int direction)
 		setPosition(limiteDroite, getPosition().y);
 	}
 }
+
 void Joueur::Jump()
 {
 	if (isOnGround)
@@ -122,9 +111,17 @@ void Joueur::Jump()
 		timerAfterJump.restart();
 	}
 }
+
 void Joueur::Update()
 {
-	
+    // <smasson>
+    /*Updater l'animateur*/
+    animator.Update();
+    /*Updater la texture*/
+    setTexture(animator.GetCurAnimTexture());
+    setTextureRect(animator.GetCurAnimRect());
+    // </smasson>
+
 	if (isJumping)
 	{
 		auto a = timerAfterJump.getElapsedTime();
@@ -143,6 +140,7 @@ void Joueur::Update()
 		Gravite();
 	}
 }
+
 void Joueur::Gravite()
 {
 	if (gravityTimer.getElapsedTime() > gravityTime)
