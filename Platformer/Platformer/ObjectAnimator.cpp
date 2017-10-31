@@ -44,6 +44,14 @@ void ObjectAnimator::Update()
     }
 }
 
+void ObjectAnimator::InitAnim(const int animNumber, const float animPerSeconds)
+{
+    curAnim = animNumber;
+    curFrame = 0;
+    animTime = seconds(animPerSeconds);
+    animClock.restart();
+}
+
 void ObjectAnimator::PlayAnim(const int animNumber, const float animPerSeconds)
 {
     if (curAnim != animNumber)

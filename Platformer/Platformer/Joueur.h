@@ -41,7 +41,7 @@ namespace platformer
         };
         // </smasson>
 		void move(const int direction);
-		bool Init(const int limiteGauche, const int limiteDroite, const String texturePath, const String runAnimPath, const String idleAnimPath);
+		bool Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath);
 		void Jump();
 		void Update();
 		void Gravite();
@@ -53,6 +53,11 @@ namespace platformer
         // <smasson>
         Texture runAnimTexture;
         Texture idleAnimTexture;
+
+        bool lookLeft;
+
+        const float SCALE_X = 0.05f;
+        const float SCALE_Y = 0.05f;
 
         ObjectAnimator animator;
         // </smasson>

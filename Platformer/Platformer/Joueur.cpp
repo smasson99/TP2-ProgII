@@ -11,14 +11,10 @@ Joueur::~Joueur()
 {
 }
 
-bool Joueur::Init(const int limiteGauche, const int limiteDroite, const String texturePath, const String runAnimPath, const String idleAnimPath)
+bool Joueur::Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath)
 {
-	if (!texture.loadFromFile(texturePath))
-	{
-		return false;
-	}
     // <smasson>
-    if (!runAnimTexture.loadFromFile(runAnimPath))
+    if (!runAnimTexture.loadFromFile(walkAnimPath))
     {
         return false;
     }
@@ -30,14 +26,21 @@ bool Joueur::Init(const int limiteGauche, const int limiteDroite, const String t
     /*Ici, l'ordre d'appel est important et est dépendant de l'enum: Animations*/
     /*IDLE = 0, RUN_LEFT = 1, RUN_RIGHT= 2, JUMP = 3, DIE = 4*/
     /*//*/
-    /*animator.AddAnim(idleAnimTexture);
+    animator.AddAnim(idleAnimTexture);
     animator.AddAnim(runAnimTexture);
-    animator.AddAnim(runAnimTexture);*/
-    // </smasson>
+    animator.AddAnim(runAnimTexture);
 
-	setTexture(texture);
-	setTextureRect(persoRect);
-	setOrigin(TAILLE_RECT / 2, TAILLE_RECT /2);
+    //On regarde à droite en commençant
+    lookLeft = false;
+    //On start l'IDLE
+    /*Il faut user de cette fonction pour démarrer, autrement nous assisterons à une crise d'épilepsie*/
+    animator.InitAnim(IDLE, 0.3f);
+    /*Nous setons la texture de base avec son rect*/
+    setTexture(animator.GetCurAnimTexture());
+    setTextureRect(animator.GetCurAnimRect());
+    /*Setter l'origine (très important)*/
+	setOrigin(animator.GetCurAnimRect().width / 2, animator.GetCurAnimRect().height / 2);
+    // </smasson>
 
 	this->limiteGauche = limiteGauche + TAILLE_RECT / 4;
 	this->limiteDroite = limiteDroite - TAILLE_RECT / 4;
@@ -54,21 +57,21 @@ void Joueur::move(const int direction)
 	// Droite
 	if (direction == 1)
 	{
-		Sprite::move(vitesse, 0);
+		Sprite::move(vitesse/2, 0);
         // <smasson>
         /*Jouer à droite(anim)*/
-        /*animator.PlayAnim(RUN_RIGHT, 0.09f);
-        setScale(-1, 1);*/
+        animator.PlayAnim(RUN_RIGHT, 0.18f);
+        lookLeft = false;
         // </smasson>
 	}
 	// Gauche
 	else if (direction == -1)
 	{
-		Sprite::move(-vitesse, 0);
+		Sprite::move(-vitesse/2, 0);
         // <smasson>
         /*Jouer à gauche(anim)*/
-        /*animator.PlayAnim(RUN_LEFT, 0.09f);
-        setScale(1, 1);*/
+        animator.PlayAnim(RUN_LEFT, 0.18f);
+        lookLeft = true;
         // </smasson>
 	}
 	// Bas
@@ -88,7 +91,7 @@ void Joueur::move(const int direction)
     else
     {
         /*Jouer l'IDLE*/
-        /*animator.PlayAnim(IDLE, 0.0f);*/
+        animator.PlayAnim(IDLE, 0.3f);
     }
     // </smasson>
 
@@ -101,6 +104,13 @@ void Joueur::move(const int direction)
 	{
 		setPosition(limiteDroite, getPosition().y);
 	}
+    // <smasson>
+    /*Updater la direction de look*/
+    if (lookLeft)
+        setScale(SCALE_X*-1, SCALE_Y);
+    else
+        setScale(SCALE_X, SCALE_Y);
+    // </smasson>
 }
 
 void Joueur::Jump()
@@ -116,10 +126,10 @@ void Joueur::Update()
 {
     // <smasson>
     //Updater l'animateur
-    //animator.Update();
+    animator.Update();
     //Updater la texture
-    //setTexture(animator.GetCurAnimTexture());
-    //setTextureRect(animator.GetCurAnimRect());
+    setTexture(animator.GetCurAnimTexture());
+    setTextureRect(animator.GetCurAnimRect());
     // </smasson>
 
 	if (isJumping)

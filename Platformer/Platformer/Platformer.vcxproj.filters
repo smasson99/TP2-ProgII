@@ -31,9 +31,6 @@
     <Filter Include="Fichiers de ressources\Tiles">
       <UniqueIdentifier>{d30494d1-0ee3-4035-be38-b1d26344d6a7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Fichiers de ressources\Sprites\Player">
-      <UniqueIdentifier>{170c0d34-ef94-4b38-ae1a-1597bc683d42}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers de ressources\Sprites\1_Troll">
       <UniqueIdentifier>{fc467fab-4956-4926-9df8-9b45bccbbd17}</UniqueIdentifier>
     </Filter>
@@ -105,6 +102,78 @@
     </Filter>
     <Filter Include="Fichiers de ressources\Sprites\3_Troll\Walk">
       <UniqueIdentifier>{5257b334-e086-4b6c-8016-cd38c670c4b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight">
+      <UniqueIdentifier>{8e14805b-e043-4c12-98fc-d834d261a20e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight">
+      <UniqueIdentifier>{64be7b90-f71a-4da3-b8bc-9344c64f6f11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight">
+      <UniqueIdentifier>{5c6864d5-3cbc-4eca-9139-dad76ea2a835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight\Attack">
+      <UniqueIdentifier>{56d52576-6e39-4e0a-8cfa-3be60228f69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight\Die">
+      <UniqueIdentifier>{014f6a84-941a-4b71-9eb1-4ff375e23326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight\Hurt">
+      <UniqueIdentifier>{f21165dc-ac35-4643-b4b2-8fca16bab415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight\Idle">
+      <UniqueIdentifier>{5070f3a3-8e69-4d3f-8a24-ab82d4847c37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight\Jump">
+      <UniqueIdentifier>{dc2ef990-0a44-4cee-9d6a-ed023bf0a8d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight\Run">
+      <UniqueIdentifier>{faa89ae3-e22c-4c93-b4d3-6756d6f27460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\1_Knight\Walk">
+      <UniqueIdentifier>{d1ffa013-5fc2-49ed-a48f-0a9aa5f60b45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight\Attack">
+      <UniqueIdentifier>{8c5e1e0f-c852-41c7-ba51-8e3e9a47c8a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight\Die">
+      <UniqueIdentifier>{cabe4cf4-132a-4bde-a5e7-1a475d6ce6de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight\Hurt">
+      <UniqueIdentifier>{ea5c8492-b172-4539-8c45-78aad24e14e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight\Idle">
+      <UniqueIdentifier>{82c5634c-88e7-488b-839b-2308dbed4641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight\Jump">
+      <UniqueIdentifier>{0e55743a-526e-4764-9fd4-e248d90179a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight\Run">
+      <UniqueIdentifier>{974df33a-d37c-4aca-be68-080934d92ca2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\2_Knight\Walk">
+      <UniqueIdentifier>{3bd4f0e7-e9d2-42d1-98a8-8e8813e94f9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight\Attack">
+      <UniqueIdentifier>{b61a36ae-8774-4d7c-9a24-e3fc6ec23292}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight\Die">
+      <UniqueIdentifier>{9fcd8d39-fc6e-4aaa-9ac7-cdf457441792}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight\Hurt">
+      <UniqueIdentifier>{248b672c-eb96-435b-a0fd-98ea1e78283b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight\Idle">
+      <UniqueIdentifier>{48ba60bc-0c8e-45b4-876c-41f988dbb7ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight\Jump">
+      <UniqueIdentifier>{60b658ee-64cb-4fd4-a4ef-b0f88616f121}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight\Run">
+      <UniqueIdentifier>{fc0aabbe-2df0-4135-9e8e-b3e32d2d44e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\3_Knight\Walk">
+      <UniqueIdentifier>{86eddec3-bbf0-4998-8b4f-670d3a80479c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -241,26 +310,8 @@
     <Image Include="Ressources\Tiles\Platform.png">
       <Filter>Fichiers de ressources\Tiles</Filter>
     </Image>
-    <Image Include="Ressources\Sprites\Player\Celebrate.png">
-      <Filter>Fichiers de ressources\Sprites\Player</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\Player\Die.png">
-      <Filter>Fichiers de ressources\Sprites\Player</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\Player\Idle.png">
-      <Filter>Fichiers de ressources\Sprites\Player</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\Player\Jump.png">
-      <Filter>Fichiers de ressources\Sprites\Player</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\Player\Run.png">
-      <Filter>Fichiers de ressources\Sprites\Player</Filter>
-    </Image>
     <Image Include="Ressources\Sprites\Title.png">
       <Filter>Fichiers de ressources\Sprites</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\Player\Player.png">
-      <Filter>Fichiers de ressources\Sprites\Player</Filter>
     </Image>
     <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_000.png">
       <Filter>Fichiers de ressources\Sprites\1_Troll\Attak</Filter>
@@ -702,6 +753,27 @@
     </Image>
     <Image Include="Ressources\Sprites\3_TROLL\RUN\RUN_006.png">
       <Filter>Fichiers de ressources\Sprites\3_Troll\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_KNIGHT\_ATTACK\attack.png">
+      <Filter>Fichiers de ressources\Sprites\2_Knight\Attack</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_KNIGHT\_DIE\die.png">
+      <Filter>Fichiers de ressources\Sprites\2_Knight\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_KNIGHT\_HURT\hurt.png">
+      <Filter>Fichiers de ressources\Sprites\2_Knight\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_KNIGHT\_IDLE\idle.png">
+      <Filter>Fichiers de ressources\Sprites\2_Knight\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_KNIGHT\_JUMP\jump.png">
+      <Filter>Fichiers de ressources\Sprites\2_Knight\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_KNIGHT\_RUN\run.png">
+      <Filter>Fichiers de ressources\Sprites\2_Knight\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\2_KNIGHT\_WALK\walk.png">
+      <Filter>Fichiers de ressources\Sprites\2_Knight\Walk</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
