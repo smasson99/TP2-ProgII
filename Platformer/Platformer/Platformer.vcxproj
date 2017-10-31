@@ -173,6 +173,13 @@
     <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_004.png" />
     <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_005.png" />
     <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_006.png" />
+    <Image Include="Ressources\Sprites\2_KNIGHT\_ATTACK\attack.png" />
+    <Image Include="Ressources\Sprites\2_KNIGHT\_DIE\die.png" />
+    <Image Include="Ressources\Sprites\2_KNIGHT\_HURT\hurt.png" />
+    <Image Include="Ressources\Sprites\2_KNIGHT\_IDLE\idle.png" />
+    <Image Include="Ressources\Sprites\2_KNIGHT\_JUMP\jump.png" />
+    <Image Include="Ressources\Sprites\2_KNIGHT\_RUN\run.png" />
+    <Image Include="Ressources\Sprites\2_KNIGHT\_WALK\walk.png" />
     <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_000.png" />
     <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_001.png" />
     <Image Include="Ressources\Sprites\2_TROLL\ATTAK\ATTAK_002.png" />
@@ -271,12 +278,6 @@
     <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_004.png" />
     <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_005.png" />
     <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_006.png" />
-    <Image Include="Ressources\Sprites\Player\Celebrate.png" />
-    <Image Include="Ressources\Sprites\Player\Die.png" />
-    <Image Include="Ressources\Sprites\Player\Idle.png" />
-    <Image Include="Ressources\Sprites\Player\Jump.png" />
-    <Image Include="Ressources\Sprites\Player\Player.png" />
-    <Image Include="Ressources\Sprites\Player\Run.png" />
     <Image Include="Ressources\Sprites\Title.png" />
     <Image Include="Ressources\Tiles\BlockA0.png" />
     <Image Include="Ressources\Tiles\BlockA1.png" />

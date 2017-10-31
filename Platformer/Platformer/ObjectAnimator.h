@@ -10,6 +10,7 @@ namespace platformer
         ObjectAnimator();
         ~ObjectAnimator();
         void AddAnim(Texture texture);
+        void InitAnim(const int animNumber, const float animPerSeconds);
         void PlayAnim(const int animNumber, const float animPerSeconds);
         void Update();
         IntRect& GetCurAnimRect();

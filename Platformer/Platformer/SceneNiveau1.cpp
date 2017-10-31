@@ -54,7 +54,7 @@ bool SceneNiveau1::init(RenderWindow * const window)
 		}
 	}
 
-	if (!joueur.Init(0, window->getSize().x, "Ressources\\Sprites\\Player\\Player.png", "Ressources\\Sprites\\Player\\Run.png", "Ressources\\Sprites\\Player\\Idle.png"))
+	if (!joueur.Init(0, window->getSize().x, "Ressources\\Sprites\\2_Knight\\_Walk\\Walk.png", "Ressources\\Sprites\\2_Knight\\_Idle\\Idle.png"))
 	{
 		return false;
 	}
