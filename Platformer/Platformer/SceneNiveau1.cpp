@@ -65,6 +65,7 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	}
 	
 	srand(time(NULL));
+	// <SBerube>
 	for (size_t x = 0; x < NOMBRE_TUILES_X; ++x)
 	{
 		// Plafond
@@ -125,7 +126,7 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	grilleDeTuiles[1][NOMBRE_TUILES_Y - 2]->setPosition(1 * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
 	//Position arbitraire pour le joueur en x, pas arbitraire en y (sur le plancher)
 	joueur.setPosition(100, window->getSize().y - TAILLE_TUILES_Y * 2);
-
+	// </SBerube>
 	this->mainWin = window;
 	isRunning = true;
 	
@@ -156,7 +157,7 @@ void SceneNiveau1::getInputs()
 	}
 
 	interfaceCommande = 0;
-
+	// <SBerube>
 	//Méthode binaire: appuyer à gauche et à droite sumultanément va donner 3, et le personnage ne se dépalcera alors pas.
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left) || sf::Keyboard::isKeyPressed(sf::Keyboard::A))
 	{
@@ -172,6 +173,7 @@ void SceneNiveau1::getInputs()
 	{
 		interfaceCommande |= 4;
 	}
+	// </SBerube>
 	// <smasson>
     else
     {
@@ -182,6 +184,7 @@ void SceneNiveau1::getInputs()
 
 void SceneNiveau1::update()
 {
+	// <SBerube>
 	if (interfaceCommande == 1 || interfaceCommande == 5)
 	{
 		joueur.move(-1);
@@ -198,6 +201,7 @@ void SceneNiveau1::update()
     {
         joueur.move(0);
     }
+	// </SBerube>
     joueur.Update();
 }
 

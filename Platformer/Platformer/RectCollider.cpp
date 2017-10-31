@@ -1,4 +1,5 @@
 #pragma once
+// <SBerube>
 #include "RectCollider.h"
 RectCollider::RectCollider()
 {
@@ -40,3 +41,4 @@ bool RectCollider::CollidesWith(Vector2f upLeftLimit, Vector2f downRightLimit)
 	collider.setLimits(upLeftLimit, downRightLimit);
 	return this->CollidesWith(collider);
 }
+// </SBerube>

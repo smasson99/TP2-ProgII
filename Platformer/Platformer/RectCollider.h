@@ -1,4 +1,5 @@
 #pragma once
+// <SBerube>
 #include <SFML/Graphics.hpp>
 using namespace sf;
 class RectCollider
@@ -15,3 +16,4 @@ private:
 	Vector2f upLeftLimit;
 	Vector2f downRightLimit;
 };
+// </SBerube>

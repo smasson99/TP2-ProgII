@@ -5,6 +5,10 @@ using namespace platformer;
 
 Joueur::Joueur() : persoRect(0, 0, TAILLE_RECT, TAILLE_RECT)
 {
+	isOnGround = true;
+	isJumping = false;
+	jumpTime = milliseconds(500);
+	gravityTick = milliseconds(10);
 }
 
 Joueur::~Joueur()
@@ -39,12 +43,11 @@ bool Joueur::Init(const int limiteGauche, const int limiteDroite, const String t
 	setTextureRect(persoRect);
 	setOrigin(TAILLE_RECT / 2, TAILLE_RECT /2);
 
+	// <SBerube>
+	collider = RectCollider(Vector2f(getPosition().x, getPosition().y), Vector2f(getPosition().x + texture.getSize().x, getPosition().y + texture.getSize().y));
+	// </SBerube>
 	this->limiteGauche = limiteGauche + TAILLE_RECT / 4;
 	this->limiteDroite = limiteDroite - TAILLE_RECT / 4;
-	isOnGround = true;
-	isJumping = false;
-
-	jumpTime = milliseconds(1400);
 
 	return true;
 }
@@ -71,17 +74,18 @@ void Joueur::move(const int direction)
         setScale(1, 1);*/
         // </smasson>
 	}
+	// <SBerube>
 	// Bas
 	else if(direction == 2)
 	{
-		Sprite::move(0, 3);
+		Sprite::move(0, 1);
 	}
 	// Haut
 	else if (direction == -2)
 	{
-		Sprite::move(0, -2);
+		Sprite::move(0, -1.5);
 	}
-
+	// </SBerube>
     // <smasson>
 
     /*Sinon, nous ne bougeons pas, donc aller en Idle*/
@@ -102,7 +106,7 @@ void Joueur::move(const int direction)
 		setPosition(limiteDroite, getPosition().y);
 	}
 }
-
+// <SBerube>
 void Joueur::Jump()
 {
 	if (isOnGround)
@@ -132,7 +136,7 @@ void Joueur::Update()
 		}
 		else
 		{
-			//isJumping = false;
+			isJumping = false;
 		}
 	}
 	else if (!isOnGround)
@@ -140,12 +144,12 @@ void Joueur::Update()
 		Gravite();
 	}
 }
-
 void Joueur::Gravite()
 {
-	if (gravityTimer.getElapsedTime() > gravityTime)
+	if (gravityTimer.getElapsedTime() > gravityTick)
 	{
 		move(2); // On fait descendre le personnage
 		gravityTimer.restart();
 	}
 }
+// </SBerube>
