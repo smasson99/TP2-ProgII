@@ -28,6 +28,7 @@ namespace platformer
 	class Joueur : public Sprite
 	{
 	public:
+		//class SceneNiveau1;
 		Joueur();
 		~Joueur();
         // <smasson>
@@ -42,9 +43,11 @@ namespace platformer
         // </smasson>
 		void move(const int direction);
 		bool Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath);
+		// <SBerube>
 		void Jump();
 		void Update();
 		void Gravite();
+		// </SBerube>
 	private:
 		static const int TAILLE_RECT = 64;
 
@@ -63,6 +66,8 @@ namespace platformer
         // </smasson>
 		
         IntRect persoRect;
+
+		// <SBerube>
 		float vitesse = 3;
 		float limiteGauche;
 		float limiteDroite;
@@ -74,7 +79,10 @@ namespace platformer
 		Time jumpTime;
 
 		Clock gravityTimer;
-		Time gravityTime;
+		Time gravityTick;
+
+		RectCollider collider;
+		// </SBerube>
 	};
 }
 

@@ -15,6 +15,9 @@ namespace platformer
         void Update();
         IntRect& GetCurAnimRect();
         Texture& GetCurAnimTexture();
+		// <SBerube>
+		void SetCurAnimRect(IntRect rect);
+		// </SBerube>
     private:
         vector<vector<IntRect>*>* anims;
         vector<Texture>* textures;

@@ -1,4 +1,5 @@
 #pragma once
+// <SBerube>
 #include "RectCollider.h"
 RectCollider::RectCollider()
 {
@@ -12,18 +13,14 @@ RectCollider::RectCollider(Vector2f upLeftLimit, Vector2f downRightLimit)
 }
 bool RectCollider::CollidesWith(RectCollider collider)
 {
-	//float width1 = downRightLimit.x - upLeftLimit.x;
-	//float width2 = collider.GetDownRightLimit().x - collider.GetUpLeftLimit().x;
-	//float height1 = downRightLimit.y - upLeftLimit.y;
-	//float height2 = collider.GetDownRightLimit().y - collider.GetUpLeftLimit().y;
-	if (upLeftLimit.x > collider.GetUpLeftLimit().x && 
-		upLeftLimit.x < collider.GetDownRightLimit().x &&
-		downRightLimit.y > collider.GetUpLeftLimit().y &&
-		downRightLimit.y < collider.GetDownRightLimit().y)
-	{
-		return true;
-	}
-	return false;
+	// Collision tests
+
+	    // Si le collider est en bas				    OU en haut
+	if (downRightLimit.y <= collider.GetUpLeftLimit().y || upLeftLimit.y >= collider.GetDownRightLimit().y) return false; // Il n'a pas de collision
+		// Si le collider est a droite                  OU a gauche
+	if (downRightLimit.x <= collider.GetUpLeftLimit().x || upLeftLimit.x >= collider.GetDownRightLimit().x) return false; // Il n'a pas de collision
+
+	return true;
 }
 void RectCollider::setLimits(Vector2f upLeft, Vector2f downRight)
 {
@@ -40,3 +37,4 @@ bool RectCollider::CollidesWith(Vector2f upLeftLimit, Vector2f downRightLimit)
 	collider.setLimits(upLeftLimit, downRightLimit);
 	return this->CollidesWith(collider);
 }
+// </SBerube>

@@ -19,8 +19,13 @@ namespace platformer
 		void getInputs();
 		void update();
 		void draw();
+		// <SBerube>
+		static Vector2i DeterminerTuileDe(float posX, float posY);
+		static Sprite* GetGrilleAt(int x, int y);
+		// </SBerube>
 
 	private:
+		
 		static const int NOMBRE_TUILES_X = 20;
 		static const int NOMBRE_TUILES_Y = 15;
 		static const int TAILLE_TUILES_X = 40;
@@ -32,7 +37,7 @@ namespace platformer
 		/// Théoriquement la fenêtre pourrait être remplie de tuile de manière exacte (20 X 15 pour être précis, voir plus haut)
 		/// On a donc une grille de pointeurs null, et si un bloc doit être concétisé, alors il ne sera pas null.
 		/// </summary>
-		Sprite* grilleDeTuiles[NOMBRE_TUILES_X][NOMBRE_TUILES_Y];
+		static Sprite* grilleDeTuiles[NOMBRE_TUILES_X][NOMBRE_TUILES_Y];
 
 		/// <summary>
 		/// On a 7 tuiles rouges de base; alors on va toutes les utiliser, pour le moment.

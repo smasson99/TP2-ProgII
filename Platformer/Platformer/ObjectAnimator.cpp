@@ -75,4 +75,10 @@ Texture& ObjectAnimator::GetCurAnimTexture()
 {
     return textures->at(curAnim);
 }
+// <SBerube>
+void ObjectAnimator::SetCurAnimRect(IntRect rect)
+{
+	anims->at(curAnim)->at(curFrame) = rect;
+}
+// </SBerube>
 // </smasson>

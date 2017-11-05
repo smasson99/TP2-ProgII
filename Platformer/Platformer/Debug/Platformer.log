@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  AccountManagement.cpp
 c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(40): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
 c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(41): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
@@ -6,4 +7,13 @@ c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cp
 c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(53): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.exe
   Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.pdb (Partial PDB)
+=======
+﻿  Joueur.cpp
+d:\tp2-progii_vmerged\platformer\platformer\joueur.h(42): warning C4091: 'static ' : ignoré à gauche de 'platformer::Joueur::Animations' quand aucune variable n'est déclarée
+d:\tp2-progii_vmerged\platformer\platformer\joueur.cpp(49): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+d:\tp2-progii_vmerged\platformer\platformer\joueur.cpp(56): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+d:\tp2-progii_vmerged\platformer\platformer\joueur.cpp(57): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
+  Platformer.vcxproj -> D:\TP2-ProgII_vmerged\Platformer\Debug\Platformer.exe
+  Platformer.vcxproj -> D:\TP2-ProgII_vmerged\Platformer\Debug\Platformer.pdb (Partial PDB)
+>>>>>>> 2f3eb14c6821a31c63d36934a6c01f7d4587fc26
   0 fichier(s) copié(s)
