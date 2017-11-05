@@ -28,6 +28,7 @@ namespace platformer
 	class Joueur : public Sprite
 	{
 	public:
+		//class SceneNiveau1;
 		Joueur();
 		~Joueur();
         // <smasson>

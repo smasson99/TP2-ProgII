@@ -1,7 +1,7 @@
 #include "SceneNiveau1.h"
 
 using namespace platformer;
-
+Sprite* SceneNiveau1::grilleDeTuiles[NOMBRE_TUILES_X][NOMBRE_TUILES_Y];
 SceneNiveau1::SceneNiveau1()
 {
 	for (int x=0; x < NOMBRE_TUILES_X; x++)
@@ -98,21 +98,21 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	grilleDeTuiles[NOMBRE_TUILES_X - 1][2] = nullptr;
 	grilleDeTuiles[NOMBRE_TUILES_X - 1][3] = nullptr;
 	// Acces 1er etage
-	grilleDeTuiles[1][7] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[1][7]->setPosition(1 * TAILLE_TUILES_X, 7 * TAILLE_TUILES_Y);
-	grilleDeTuiles[1][6] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[1][6]->setPosition(1 * TAILLE_TUILES_X, 6 * TAILLE_TUILES_Y);
-	grilleDeTuiles[2][7] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[2][7]->setPosition(2 * TAILLE_TUILES_X, 7 * TAILLE_TUILES_Y);
+	//grilleDeTuiles[1][7] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[1][7]->setPosition(1 * TAILLE_TUILES_X, 7 * TAILLE_TUILES_Y);
+	//grilleDeTuiles[1][6] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[1][6]->setPosition(1 * TAILLE_TUILES_X, 6 * TAILLE_TUILES_Y);
+	//grilleDeTuiles[2][7] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[2][7]->setPosition(2 * TAILLE_TUILES_X, 7 * TAILLE_TUILES_Y);
 	grilleDeTuiles[1][4] = nullptr;
 	grilleDeTuiles[2][4] = nullptr;
 	// Acces 3e etage
-	grilleDeTuiles[10][9] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[10][9]->setPosition(10 * TAILLE_TUILES_X, 9 * TAILLE_TUILES_Y);
-	grilleDeTuiles[10][10] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[10][10]->setPosition(10 * TAILLE_TUILES_X, 10 * TAILLE_TUILES_Y);
-	grilleDeTuiles[11][10] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[11][10]->setPosition(11 * TAILLE_TUILES_X, 10 * TAILLE_TUILES_Y);
+	//grilleDeTuiles[10][9] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[10][9]->setPosition(10 * TAILLE_TUILES_X, 9 * TAILLE_TUILES_Y);
+	//grilleDeTuiles[10][10] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[10][10]->setPosition(10 * TAILLE_TUILES_X, 10 * TAILLE_TUILES_Y);
+	//grilleDeTuiles[11][10] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[11][10]->setPosition(11 * TAILLE_TUILES_X, 10 * TAILLE_TUILES_Y);
 	grilleDeTuiles[11][8] = nullptr;
 	grilleDeTuiles[12][8] = nullptr;
 	// Acces 4e etage
@@ -120,19 +120,43 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	grilleDeTuiles[2][11] = nullptr;
 	grilleDeTuiles[17][11] = nullptr;
 	grilleDeTuiles[18][11] = nullptr;
-	grilleDeTuiles[NOMBRE_TUILES_X - 2][NOMBRE_TUILES_Y - 2] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[NOMBRE_TUILES_X - 2][NOMBRE_TUILES_Y - 2]->setPosition((NOMBRE_TUILES_X - 2) * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
-	grilleDeTuiles[1][NOMBRE_TUILES_Y - 2] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	grilleDeTuiles[1][NOMBRE_TUILES_Y - 2]->setPosition(1 * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
+	//grilleDeTuiles[NOMBRE_TUILES_X - 2][NOMBRE_TUILES_Y - 2] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[NOMBRE_TUILES_X - 2][NOMBRE_TUILES_Y - 2]->setPosition((NOMBRE_TUILES_X - 2) * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
+	//grilleDeTuiles[1][NOMBRE_TUILES_Y - 2] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
+	//grilleDeTuiles[1][NOMBRE_TUILES_Y - 2]->setPosition(1 * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
+
 	//Position arbitraire pour le joueur en x, pas arbitraire en y (sur le plancher)
-	joueur.setPosition(100, window->getSize().y - TAILLE_TUILES_Y * 2);
+	joueur.setPosition(150, window->getSize().y - TAILLE_TUILES_Y * 2);
+
+	// origine de chaques tuiles
+	for (size_t i = 0; i < NOMBRE_TUILES_X; i++)
+	{
+		for (size_t j = 0; j < NOMBRE_TUILES_Y; j++)
+		{
+			if (grilleDeTuiles[i][j] != nullptr)
+			{
+				grilleDeTuiles[i][j]->setOrigin(0, 0);
+			}
+		}
+	}
 	// </SBerube>
 	this->mainWin = window;
 	isRunning = true;
 	
 	return true;
 }
+// <SBerube>
+Vector2i SceneNiveau1::DeterminerTuileDe(float posX, float posY)
+{
 
+	return Vector2i(posX / TAILLE_TUILES_X, posY / TAILLE_TUILES_Y);
+}
+Sprite* SceneNiveau1::GetGrilleAt(int x, int y)
+{
+	//grilleDeTuiles[x][y]->setOrigin(0, 0);
+	return grilleDeTuiles[x][y];
+}
+// </SBerube>
 void SceneNiveau1::getInputs()
 {
 	while (mainWin->pollEvent(event))
@@ -173,6 +197,11 @@ void SceneNiveau1::getInputs()
 	{
 		interfaceCommande |= 4;
 	}
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::S) || sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+	{
+		interfaceCommande |= 8;
+
+	}
 	// </SBerube>
 	// <smasson>
     else
@@ -201,6 +230,10 @@ void SceneNiveau1::update()
     {
         joueur.move(0);
     }
+	if (interfaceCommande == 8)
+	{
+		joueur.move(2);
+	}
 	// </SBerube>
     joueur.Update();
 }
