@@ -26,9 +26,12 @@ namespace platformer
 		void ajouterChar(const char leChar);
 		void retirerChar();
 		void dessiner(RenderWindow* const window);
-		void selectionner();
+		void selectionner(Color color);
 		void deSelectionner();
 		bool touche(const Vector2i& position);
+        // <smasson>
+        float getTailleTexte();
+        // </smasson>
 		String getTexte() const;
 
 	private:

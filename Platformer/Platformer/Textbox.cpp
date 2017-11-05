@@ -70,15 +70,15 @@ void Textbox::initInfo(const Vector2f position, const Font& font, const bool est
 	else
 	{
 		texte.setFillColor(Color::White);
-	}	
+	}
 }
 
 /// <summary>
 /// Fait juste changer la couleur du cadre.
 /// </summary>
-void Textbox::selectionner()
+void Textbox::selectionner(Color color)
 {
-	boite.setOutlineColor(Color::Yellow);
+	boite.setOutlineColor(color);
 }
 
 void Textbox::deSelectionner()
@@ -100,6 +100,11 @@ bool Textbox::touche(const Vector2i& position)
 	}
 
 	return false;
+}
+
+float Textbox::getTailleTexte()
+{
+    return texte.getCharacterSize();
 }
 
 String Textbox::getTexte() const
@@ -150,8 +155,8 @@ void Textbox::retirerChar()
 void Textbox::ajustementsVisuels()
 {
 	FloatRect coord = texte.getGlobalBounds();
-	texte.setOrigin(Vector2f(coord.width / 2, coord.height / 2));
-	texte.setPosition(boite.getPosition());
+    texte.setOrigin(Vector2f(coord.width / 2, coord.height / 2));
+	texte.setPosition(boite.getPosition().x, boite.getPosition().y-(texte.getCharacterSize()/10 * 2 + 1)/*-5*/);
 }
 
 void Textbox::dessiner(RenderWindow* const window)

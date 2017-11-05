@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Scene.h"
 #include "Joueur.h"
+#include "Spawner.h"
 
 using namespace sf;
 
@@ -44,6 +45,12 @@ namespace platformer
 		Texture backgroundT[BACKGROUNDS];
 		Sprite background[BACKGROUNDS];
 		
+        // <smasson>
+        /*Voici les spawners*/
+        Spawner spawner01;
+        Spawner spawner02;
+        // </smasson>
+
 		Joueur joueur;
 		int interfaceCommande;
 	};

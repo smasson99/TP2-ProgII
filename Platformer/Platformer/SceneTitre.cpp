@@ -68,7 +68,7 @@ void SceneTitre::getInputs()
 			if (textbox.touche(Mouse::getPosition(*mainWin)))
 			{
 				textboxActif = &textbox; //Ce textbox devient actif
-				textbox.selectionner();  //on l'affiche comme étant sélectionné
+				textbox.selectionner(Color::Yellow);  //on l'affiche comme étant sélectionné
 				textboxErreur.insererTexte(""); //on efface le message d'erreur (optionnel, amis ça fait clean si on fait un nouvel essai)
 			}
 			else

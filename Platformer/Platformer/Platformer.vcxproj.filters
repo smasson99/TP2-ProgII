@@ -175,6 +175,18 @@
     <Filter Include="Fichiers de ressources\Sprites\3_Knight\Walk">
       <UniqueIdentifier>{86eddec3-bbf0-4998-8b4f-670d3a80479c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\Gems">
+      <UniqueIdentifier>{b2937251-55b8-41f5-be27-fa1e1130c878}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\UI">
+      <UniqueIdentifier>{a7d2f697-1714-4fb8-8537-828877ad632c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\UI\Backgrounds">
+      <UniqueIdentifier>{cbe32059-163b-46f5-8f1d-1d20a1a0c2c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Other">
+      <UniqueIdentifier>{b99eb03b-fa1b-4203-903b-0c0687e2b5c0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -207,6 +219,21 @@
     <ClCompile Include="ObjectAnimator.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="Spawner.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuPrincipale.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountHandler.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountManagement.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -237,6 +264,21 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="ObjectAnimator.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Spawner.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuPrincipale.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountHandler.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountManagement.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -775,6 +817,60 @@
     <Image Include="Ressources\Sprites\2_KNIGHT\_WALK\walk.png">
       <Filter>Fichiers de ressources\Sprites\2_Knight\Walk</Filter>
     </Image>
+    <Image Include="Ressources\Sprites\1_KNIGHT\_ATTACK\attack.png">
+      <Filter>Fichiers de ressources\Sprites\1_Knight\Attack</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_KNIGHT\_DIE\die.png">
+      <Filter>Fichiers de ressources\Sprites\1_Knight\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_KNIGHT\_HURT\hurt.png">
+      <Filter>Fichiers de ressources\Sprites\1_Knight\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_KNIGHT\_IDLE\idle.png">
+      <Filter>Fichiers de ressources\Sprites\1_Knight\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_KNIGHT\_JUMP\jump.png">
+      <Filter>Fichiers de ressources\Sprites\1_Knight\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_KNIGHT\_RUN\run.png">
+      <Filter>Fichiers de ressources\Sprites\1_Knight\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_KNIGHT\_WALK\walk.png">
+      <Filter>Fichiers de ressources\Sprites\1_Knight\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_KNIGHT\_ATTACK\attack.png">
+      <Filter>Fichiers de ressources\Sprites\3_Knight\Attack</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_KNIGHT\_DIE\die.png">
+      <Filter>Fichiers de ressources\Sprites\3_Knight\Die</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_KNIGHT\_HURT\hurt.png">
+      <Filter>Fichiers de ressources\Sprites\3_Knight\Hurt</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_KNIGHT\_IDLE\idle.png">
+      <Filter>Fichiers de ressources\Sprites\3_Knight\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_KNIGHT\_JUMP\jump.png">
+      <Filter>Fichiers de ressources\Sprites\3_Knight\Jump</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_KNIGHT\_RUN\run.png">
+      <Filter>Fichiers de ressources\Sprites\3_Knight\Run</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\3_KNIGHT\_WALK\walk.png">
+      <Filter>Fichiers de ressources\Sprites\3_Knight\Walk</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\GEMS\1_gem.png">
+      <Filter>Fichiers de ressources\Sprites\Gems</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\GEMS\2_gem.png">
+      <Filter>Fichiers de ressources\Sprites\Gems</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\GEMS\orbs.png">
+      <Filter>Fichiers de ressources\Sprites\Gems</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\UI\Backgrounds\BlackSquare.png">
+      <Filter>Fichiers de ressources\Sprites\UI\Backgrounds</Filter>
+    </Image>
   </ItemGroup>
   <ItemGroup>
     <Font Include="Ressources\Fonts\Peric.ttf">
@@ -806,5 +902,10 @@
     <None Include="Ressources\Sounds\Powerup.ogg">
       <Filter>Fichiers de ressources\Sounds</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Ressources\Other\accounts.txt">
+      <Filter>Fichiers de ressources\Other</Filter>
+    </Text>
   </ItemGroup>
 </Project>

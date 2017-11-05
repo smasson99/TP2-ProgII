@@ -1,13 +1,18 @@
 #include "Game.h"
 #include "SceneTitre.h"
 #include "SceneNiveau1.h"
+// <smasson>
+#include "MenuPrincipale.h"
+#include "Login.h"
+#include "AccountManagement.h"
+// </smasson>
 
 using namespace platformer;
 
 Game::Game()
 {
 	//On place dans le contructeur ce qui permet à la game elle-même de fonctionner
-
+    setlocale(LC_ALL, "");
 	mainWin.create(VideoMode(LARGEUR, HAUTEUR, 32), "Platformer");  // , Style::Titlebar); / , Style::FullScreen);
 
 	//Synchonisation coordonnée à l'écran!  Normalement 60 frames par secondes. À faire absolument
@@ -25,7 +30,7 @@ int Game::run()
 {
 	//deux enums et un pointeur de scene pour faire la manipulation de scène
 	//Scene::scenes selecteurDeScene = Scene::scenes::TITRE;
-	Scene::scenes selecteurDeScene = Scene::scenes::NIVEAU1; // remmetre à la fin
+	Scene::scenes selecteurDeScene = Scene::scenes::GESTION_COMPTE; // remmetre à la fin
 	Scene::scenes sceneEnRetour;
 	Scene* sceneActive = nullptr; //Pointeur de la super-classe, peut pointer sur n'imprte quelle scène
 
@@ -42,6 +47,17 @@ int Game::run()
 			//être ajoutées ici
 			switch (selecteurDeScene)
 			{
+                // <smasson>
+            case Scene::scenes::MENU_PRINCIPALE:
+                sceneActive = new MenuPrincipale();
+                break;
+            case Scene::scenes::LOGIN:
+                sceneActive = new Login();
+                break;
+            case Scene::scenes::GESTION_COMPTE:
+                sceneActive = new AccountManagement();
+                break;
+                // </smasson>
 			case Scene::scenes::TITRE:
 				sceneActive = new SceneTitre();
 				break;

@@ -57,20 +57,20 @@ void Joueur::move(const int direction)
 	// Droite
 	if (direction == 1)
 	{
-		Sprite::move(vitesse/2, 0);
+		Sprite::move(vitesse/4.0f, 0);
         // <smasson>
         /*Jouer à droite(anim)*/
-        animator.PlayAnim(RUN_RIGHT, 0.18f);
+        animator.PlayAnim(RUN_RIGHT, 0.1f);
         lookLeft = false;
         // </smasson>
 	}
 	// Gauche
 	else if (direction == -1)
 	{
-		Sprite::move(-vitesse/2, 0);
+		Sprite::move(-vitesse/4.0f, 0);
         // <smasson>
         /*Jouer à gauche(anim)*/
-        animator.PlayAnim(RUN_LEFT, 0.18f);
+        animator.PlayAnim(RUN_LEFT, 0.1f);
         lookLeft = true;
         // </smasson>
 	}

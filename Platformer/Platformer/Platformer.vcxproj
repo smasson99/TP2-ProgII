@@ -88,26 +88,36 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AccountHandler.cpp" />
+    <ClCompile Include="AccountManagement.cpp" />
     <ClCompile Include="AnimationShredder.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Joueur.cpp" />
+    <ClCompile Include="Login.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MenuPrincipale.cpp" />
     <ClCompile Include="ObjectAnimator.cpp" />
     <ClCompile Include="RectCollider.cpp" />
     <ClCompile Include="SceneNiveau1.cpp" />
     <ClCompile Include="SceneTitre.cpp" />
+    <ClCompile Include="Spawner.cpp" />
     <ClCompile Include="Testeur.cpp" />
     <ClCompile Include="Textbox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccountHandler.h" />
+    <ClInclude Include="AccountManagement.h" />
     <ClInclude Include="AnimationShredder.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Joueur.h" />
+    <ClInclude Include="Login.h" />
+    <ClInclude Include="MenuPrincipale.h" />
     <ClInclude Include="ObjectAnimator.h" />
     <ClInclude Include="RectCollider.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneNiveau1.h" />
     <ClInclude Include="SceneTitre.h" />
+    <ClInclude Include="Spawner.h" />
     <ClInclude Include="Testeur.h" />
     <ClInclude Include="Textbox.h" />
   </ItemGroup>
@@ -124,6 +134,13 @@
     <Image Include="Ressources\Overlays\you_died.png" />
     <Image Include="Ressources\Overlays\you_lose.png" />
     <Image Include="Ressources\Overlays\you_win.png" />
+    <Image Include="Ressources\Sprites\1_KNIGHT\_ATTACK\attack.png" />
+    <Image Include="Ressources\Sprites\1_KNIGHT\_DIE\die.png" />
+    <Image Include="Ressources\Sprites\1_KNIGHT\_HURT\hurt.png" />
+    <Image Include="Ressources\Sprites\1_KNIGHT\_IDLE\idle.png" />
+    <Image Include="Ressources\Sprites\1_KNIGHT\_JUMP\jump.png" />
+    <Image Include="Ressources\Sprites\1_KNIGHT\_RUN\run.png" />
+    <Image Include="Ressources\Sprites\1_KNIGHT\_WALK\walk.png" />
     <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_000.png" />
     <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_001.png" />
     <Image Include="Ressources\Sprites\1_TROLL\ATTAK\ATTAK_002.png" />
@@ -229,6 +246,13 @@
     <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_004.png" />
     <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_005.png" />
     <Image Include="Ressources\Sprites\2_TROLL\WALK\WALK_006.png" />
+    <Image Include="Ressources\Sprites\3_KNIGHT\_ATTACK\attack.png" />
+    <Image Include="Ressources\Sprites\3_KNIGHT\_DIE\die.png" />
+    <Image Include="Ressources\Sprites\3_KNIGHT\_HURT\hurt.png" />
+    <Image Include="Ressources\Sprites\3_KNIGHT\_IDLE\idle.png" />
+    <Image Include="Ressources\Sprites\3_KNIGHT\_JUMP\jump.png" />
+    <Image Include="Ressources\Sprites\3_KNIGHT\_RUN\run.png" />
+    <Image Include="Ressources\Sprites\3_KNIGHT\_WALK\walk.png" />
     <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_000.png" />
     <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_001.png" />
     <Image Include="Ressources\Sprites\3_TROLL\ATTAK\ATTAK_002.png" />
@@ -278,7 +302,11 @@
     <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_004.png" />
     <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_005.png" />
     <Image Include="Ressources\Sprites\3_TROLL\WALK\WALK_006.png" />
+    <Image Include="Ressources\Sprites\GEMS\1_gem.png" />
+    <Image Include="Ressources\Sprites\GEMS\2_gem.png" />
+    <Image Include="Ressources\Sprites\GEMS\orbs.png" />
     <Image Include="Ressources\Sprites\Title.png" />
+    <Image Include="Ressources\Sprites\UI\Backgrounds\BlackSquare.png" />
     <Image Include="Ressources\Tiles\BlockA0.png" />
     <Image Include="Ressources\Tiles\BlockA1.png" />
     <Image Include="Ressources\Tiles\BlockA2.png" />
@@ -303,6 +331,9 @@
     <None Include="Ressources\Sounds\PlayerJump.ogg" />
     <None Include="Ressources\Sounds\PlayerKilled.ogg" />
     <None Include="Ressources\Sounds\Powerup.ogg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Ressources\Other\accounts.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

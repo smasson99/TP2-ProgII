@@ -1,24 +1,9 @@
-﻿  Joueur.cpp
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.h(41): warning C4091: 'static ' : ignoré à gauche de 'platformer::Joueur::Animations' quand aucune variable n'est déclarée
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.cpp(42): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.cpp(45): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.cpp(46): warning C4244: '=' : conversion de 'int' en 'float', perte possible de données
-  Génération de code en cours...
-  Compilation en cours...
-  SceneNiveau1.cpp
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.h(41): warning C4091: 'static ' : ignoré à gauche de 'platformer::Joueur::Animations' quand aucune variable n'est déclarée
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(67): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(72): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(75): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(79): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(82): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(85): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(91): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(94): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(127): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
-  Game.cpp
-c:\users\smasson99\desktop\tp2-progii\platformer\platformer\joueur.h(41): warning C4091: 'static ' : ignoré à gauche de 'platformer::Joueur::Animations' quand aucune variable n'est déclarée
-  Génération de code en cours...
+﻿  AccountManagement.cpp
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(40): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(41): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(47): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(50): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\accountmanagement.cpp(53): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
   Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.exe
   Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.pdb (Partial PDB)
   0 fichier(s) copié(s)

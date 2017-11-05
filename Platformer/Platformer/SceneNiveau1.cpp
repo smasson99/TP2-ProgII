@@ -58,7 +58,16 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	{
 		return false;
 	}
-	
+
+    // <smasson>
+    string spawnerPath = "Ressources\\Sprites\\GEMS\\orbs.png";
+    if (!spawner01.Init(spawnerPath) || !spawner02.Init(spawnerPath))
+    {
+        return false;
+    }
+    
+	// </smasson>
+
 	for (int i = 0; i < BACKGROUNDS; i++)
 	{
 		background[i].setTexture(backgroundT[i]);
@@ -125,6 +134,8 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	grilleDeTuiles[1][NOMBRE_TUILES_Y - 2]->setPosition(1 * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
 	//Position arbitraire pour le joueur en x, pas arbitraire en y (sur le plancher)
 	joueur.setPosition(100, window->getSize().y - TAILLE_TUILES_Y * 2);
+
+    spawner01.SetPosition(TAILLE_TUILES_X*3.5f, window->getSize().y - TAILLE_TUILES_Y*14.5);
 
 	this->mainWin = window;
 	isRunning = true;
@@ -199,6 +210,9 @@ void SceneNiveau1::update()
         joueur.move(0);
     }
     joueur.Update();
+    // <smasson>
+    spawner01.Update();
+    // </smasson>
 }
 
 void SceneNiveau1::draw()
@@ -219,6 +233,10 @@ void SceneNiveau1::draw()
 			}
 		}
 	
+    // <smasson>
+    spawner01.Draw(mainWin);
+    // </smasson>
+
 	mainWin->draw(joueur);
 	mainWin->display();
 }
