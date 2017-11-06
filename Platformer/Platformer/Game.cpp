@@ -29,8 +29,8 @@ int Game::testTest()
 int Game::run()
 {
 	//deux enums et un pointeur de scene pour faire la manipulation de scène
-	//Scene::scenes selecteurDeScene = Scene::scenes::TITRE;
-	Scene::scenes selecteurDeScene = Scene::scenes::GESTION_COMPTE; // remmetre à la fin
+	Scene::scenes selecteurDeScene = Scene::scenes::NIVEAU1;
+	//Scene::scenes selecteurDeScene = Scene::scenes::GESTION_COMPTE;
 	Scene::scenes sceneEnRetour;
 	Scene* sceneActive = nullptr; //Pointeur de la super-classe, peut pointer sur n'imprte quelle scène
 

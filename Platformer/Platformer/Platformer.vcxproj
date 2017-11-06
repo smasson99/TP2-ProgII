@@ -93,6 +93,7 @@
     <ClCompile Include="AnimationShredder.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Joueur.cpp" />
+    <ClCompile Include="Personnage.cpp" />
     <ClCompile Include="Login.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="MenuPrincipale.cpp" />
@@ -110,6 +111,7 @@
     <ClInclude Include="AnimationShredder.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Joueur.h" />
+    <ClInclude Include="Personnage.h" />
     <ClInclude Include="Login.h" />
     <ClInclude Include="MenuPrincipale.h" />
     <ClInclude Include="ObjectAnimator.h" />

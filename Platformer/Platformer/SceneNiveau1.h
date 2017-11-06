@@ -1,7 +1,7 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include "Scene.h"
-#include "Joueur.h"
+#include "Personnage.h"
 #include "Spawner.h"
 
 using namespace sf;
@@ -56,7 +56,7 @@ namespace platformer
         Spawner spawner02;
         // </smasson>
 
-		Joueur joueur;
+		Personnage joueur;
 		int interfaceCommande;
 	};
 }
