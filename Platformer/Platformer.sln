@@ -1,11 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Platformer", "Platformer\Platformer.vcxproj", "{BBB442E7-9DA8-4435-9FE5-FE7ADEFC99BB}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PlatformerTest", "PlateformerTest\PlateformerTest.vcxproj", "{4DCAEBCE-F392-46BA-945E-78EFF821D37F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BBB442E7-9DA8-4435-9FE5-FE7ADEFC99BB} = {BBB442E7-9DA8-4435-9FE5-FE7ADEFC99BB}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

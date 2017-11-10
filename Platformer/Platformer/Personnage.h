@@ -1,6 +1,7 @@
 #pragma once
 #include "RectCollider.h"
 // <smasson>
+#include "Rigidbody.h"
 #include <SFML/Graphics.hpp>
 #include "ObjectAnimator.h"
 // </smasson>
@@ -25,7 +26,7 @@ using namespace sf;
 /// </summary>
 namespace platformer
 {
-	class Personnage : public Sprite
+	class Personnage : public Rigidbody
 	{
 	public:
 		//class SceneNiveau1;
@@ -42,6 +43,9 @@ namespace platformer
         };
         // </smasson>
 		void move(const int direction);
+        void moveDown();
+        void moveUp();
+        bool IsJumping();
 		bool Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath);
 		// <SBerube>
 		void Jump();
@@ -64,22 +68,19 @@ namespace platformer
 
         ObjectAnimator animator;
         // </smasson>
-		
+        bool isJumping = false;
+        const float GRAVITY_FORCE = 2.5f;
+        const float JUMP_FORCE = 5.5f;
+        const float MAX_JUMP_TIME = 0.5f;
+        Time jumpTime;
+        Clock clock;
+
         IntRect persoRect;
 
 		// <SBerube>
 		float vitesse = 3;
 		float limiteGauche;
 		float limiteDroite;
-
-		bool isOnGround;
-
-		bool isJumping;
-		Clock timerAfterJump;
-		Time jumpTime;
-
-		Clock gravityTimer;
-		Time gravityTick;
 
 		RectCollider collider;
 		// </SBerube>

@@ -91,6 +91,7 @@
     <ClCompile Include="AccountHandler.cpp" />
     <ClCompile Include="AccountManagement.cpp" />
     <ClCompile Include="AnimationShredder.cpp" />
+    <ClCompile Include="CollisionHandler.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Personnage.cpp" />
@@ -99,6 +100,7 @@
     <ClCompile Include="MenuPrincipale.cpp" />
     <ClCompile Include="ObjectAnimator.cpp" />
     <ClCompile Include="RectCollider.cpp" />
+    <ClCompile Include="Rigidbody.cpp" />
     <ClCompile Include="SceneNiveau1.cpp" />
     <ClCompile Include="SceneTitre.cpp" />
     <ClCompile Include="Spawner.cpp" />
@@ -109,6 +111,7 @@
     <ClInclude Include="AccountHandler.h" />
     <ClInclude Include="AccountManagement.h" />
     <ClInclude Include="AnimationShredder.h" />
+    <ClInclude Include="CollisionHandler.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Personnage.h" />
@@ -116,6 +119,7 @@
     <ClInclude Include="MenuPrincipale.h" />
     <ClInclude Include="ObjectAnimator.h" />
     <ClInclude Include="RectCollider.h" />
+    <ClInclude Include="Rigidbody.h" />
     <ClInclude Include="Scene.h" />
     <ClInclude Include="SceneNiveau1.h" />
     <ClInclude Include="SceneTitre.h" />
@@ -307,6 +311,7 @@
     <Image Include="Ressources\Sprites\GEMS\1_gem.png" />
     <Image Include="Ressources\Sprites\GEMS\2_gem.png" />
     <Image Include="Ressources\Sprites\GEMS\orbs.png" />
+    <Image Include="Ressources\Sprites\Player\Player.png" />
     <Image Include="Ressources\Sprites\Title.png" />
     <Image Include="Ressources\Sprites\UI\Backgrounds\BlackSquare.png" />
     <Image Include="Ressources\Tiles\BlockA0.png" />
