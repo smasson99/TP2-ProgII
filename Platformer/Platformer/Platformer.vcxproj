@@ -88,6 +88,8 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AccountCreation.cpp" />
+    <ClCompile Include="AccountDelete.cpp" />
     <ClCompile Include="AccountHandler.cpp" />
     <ClCompile Include="AccountManagement.cpp" />
     <ClCompile Include="AnimationShredder.cpp" />
@@ -106,6 +108,8 @@
     <ClCompile Include="Textbox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccountCreation.h" />
+    <ClInclude Include="AccountDelete.h" />
     <ClInclude Include="AccountHandler.h" />
     <ClInclude Include="AccountManagement.h" />
     <ClInclude Include="AnimationShredder.h" />

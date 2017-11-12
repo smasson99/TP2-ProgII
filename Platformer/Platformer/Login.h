@@ -13,6 +13,7 @@ namespace platformer
     public:
         /*Le constructeur*/
         Login();
+		Login(bool inModification);
         /*Le destructeur*/
         ~Login();
 
@@ -26,6 +27,9 @@ namespace platformer
 
         void deselectionnerBoutons();
     private:
+
+		bool inModification;
+
         bool play();
 
         Texture backgroundTexture;

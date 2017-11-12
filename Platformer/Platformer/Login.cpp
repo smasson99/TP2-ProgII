@@ -1,10 +1,14 @@
 // <smasson>
 #include "Login.h"
-
+#include "Game.h"
 Login::Login()
 {
+	inModification = false;
 }
-
+Login::Login(bool inModification)
+{
+	this->inModification = inModification;
+}
 Login::~Login()
 {
 }
@@ -54,7 +58,7 @@ bool Login::init(RenderWindow * const window)
     passwordLabel.setString("Mot de passe:");
     
     buttonPlay.init(480, 24, Vector2f(430, 250 + ESPACEMENT_BOUTONS*3.5f), font);
-    buttonPlay.insererTexte("Jouer!");
+    buttonPlay.insererTexte("Valider");
 
     //Initialisation réussie
     return true;
@@ -209,9 +213,23 @@ bool Login::play()
     if (AccountHandler::GetInstance()->validerAccount(usernameBox.getTexte(), passwordBox.getTexte()))
     {
         //Bon username, bon mot de passe
-        transitionVersScene = Scene::NIVEAU1;
-        isRunning = false;
-        return true;
+		// ON vérifie si on est en mode modification
+		if (inModification)
+		{
+			{
+				AccountHandler::GetInstance()->setModVariables(usernameBox.getTexte());
+			}
+			transitionVersScene = Scene::MODIFICATION;
+			isRunning = false;
+			return true;
+		}
+		else
+		{
+			transitionVersScene = Scene::NIVEAU1;
+			isRunning = false;
+			return true;
+		}
+
     }
     return false;
 }
