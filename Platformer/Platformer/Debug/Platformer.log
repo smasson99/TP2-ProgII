@@ -1,17 +1,3 @@
-﻿  Login.cpp
-d:\tp2-progii_vss\platformer\platformer\login.cpp(43): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
-d:\tp2-progii_vss\platformer\platformer\login.cpp(44): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
-d:\tp2-progii_vss\platformer\platformer\login.cpp(52): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
-d:\tp2-progii_vss\platformer\platformer\login.cpp(55): warning C4244: 'argument' : conversion de 'int' en 'float', perte possible de données
-d:\tp2-progii_vss\platformer\platformer\login.cpp(57): warning C4244: 'argument' : conversion de 'float' en 'unsigned int', perte possible de données
-  AccountHandler.cpp
-  Génération de code en cours...
-  Ignoré... (aucune modification pertinente détectée)
-  MenuPrincipale.cpp
-  Game.cpp
-  AccountManagement.cpp
-  AccountDelete.cpp
-  AccountCreation.cpp
-  Platformer.vcxproj -> D:\TP2-ProgII_vss\Platformer\Debug\Platformer.exe
+﻿  Platformer.vcxproj -> D:\TP2-ProgII_vss\Platformer\Debug\Platformer.exe
   Platformer.vcxproj -> D:\TP2-ProgII_vss\Platformer\Debug\Platformer.pdb (Partial PDB)
   0 fichier(s) copié(s)
