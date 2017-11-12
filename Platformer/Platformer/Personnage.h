@@ -7,6 +7,7 @@
 // </smasson>
 
 using namespace sf;
+using namespace platformer;
 
 /// <summary>
 /// Squelette d'une classe joueur.  Y a pas grand chose ici, mais c'est tout de même la sprite
@@ -33,6 +34,15 @@ namespace platformer
 		Personnage();
 		~Personnage();
         // <smasson>
+        bool Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath);
+        virtual void Update();
+        // </smasson>
+	protected:
+        static const int TAILLE_RECT = 64;
+
+		Texture texture;
+
+        // <smasson>
         static enum Animations
         {
             IDLE,
@@ -41,39 +51,46 @@ namespace platformer
             JUMP,
             DIE
         };
-        // </smasson>
-		void move(const int direction);
+        void move(const int direction);
         void moveDown();
         void moveUp();
-        bool IsJumping();
-		bool Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath);
-		// <SBerube>
-		void Jump();
-		void Update();
-		void Gravite();
-		// </SBerube>
-	private:
-		static const int TAILLE_RECT = 64;
+        void Jump();
+        void Jump(bool right);
+        /*Les directions possibles, utile dans la détection des collisions avec les tuiles*/
+        static enum Direction
+        {
+            NONE,
+            HAUT,
+            BAS,
+            GAUCHE,
+            DROITE
+        };
 
-		Texture texture;
+        virtual bool CheckCollisions(const Direction dir, Sprite*(*tab)[15]);
 
-        // <smasson>
         Texture runAnimTexture;
         Texture idleAnimTexture;
 
         bool lookLeft;
 
+        Vector2f dir;
+
         const float SCALE_X = 0.05f;
         const float SCALE_Y = 0.05f;
 
         ObjectAnimator animator;
-        // </smasson>
+
         bool isJumping = false;
-        const float GRAVITY_FORCE = 2.5f;
-        const float JUMP_FORCE = 5.5f;
+        bool canJump = true;
+        bool colRightOnlyWJump = false;
+        bool colLeftOnlyWJump = false;
+        const float GRAVITY_FORCE = 2.9f;
+        const float JUMP_FORCE = GRAVITY_FORCE*0.95f;
         const float MAX_JUMP_TIME = 0.5f;
-        Time jumpTime;
+
+        Time time;
         Clock clock;
+        // </smasson>
 
         IntRect persoRect;
 

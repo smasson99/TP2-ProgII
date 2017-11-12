@@ -22,8 +22,11 @@ using namespace platformer;
 
 Personnage::Personnage() : persoRect(0, 0, TAILLE_RECT, TAILLE_RECT)
 {
-    jumpTime = seconds(MAX_JUMP_TIME);
+    time = seconds(MAX_JUMP_TIME);
     clock.restart();
+
+    dir.x = 0;
+    dir.y = 1;
 }
 
 Personnage::~Personnage()
@@ -56,8 +59,8 @@ bool Personnage::Init(const int limiteGauche, const int limiteDroite, const Stri
     animator.AddAnim(runAnimTexture);
     animator.AddAnim(runAnimTexture);
 
-    //On regarde à droite en commençant
-    lookLeft = false;
+    //On regarde à gauche en commençant
+    lookLeft = true;
     //On start l'IDLE
     /*Il faut user de cette fonction pour démarrer, autrement nous assisterons à une crise d'épilepsie*/
     animator.InitAnim(IDLE, 0.3f);
@@ -77,7 +80,6 @@ bool Personnage::Init(const int limiteGauche, const int limiteDroite, const Stri
     return true;
 }
 
-// <SBerube>
 void Personnage::move(const int direction)
 {
     bool collision = false;
@@ -95,29 +97,6 @@ void Personnage::move(const int direction)
         Sprite::move(-vitesse / 4.0f, 0);
     }
 
-    // Ici, on vérifie la collision entre le joueur et chaque tuile du jeu qui n'est pas vide.
-    /*for (size_t i = 0; i < 20; i++)
-    {
-        for (size_t j = 0; j < 15; j++)
-        {
-            if (SceneNiveau1::GetGrilleAt(i, j) != nullptr)
-            {
-                if (SceneNiveau1::GetGrilleAt(i, j)->getTextureRect().intersects(animator.GetCurAnimRect()))
-                {
-                    collision = true;
-                    if (direction == 2)
-                    {
-                        isOnGround = true;
-                    }
-                    else if (direction == -2)
-                    {
-                        isJumping = false;
-                    }
-
-                }
-            }
-        }
-    }*/
     if (direction == 1)
     {
         // <smasson>
@@ -142,7 +121,7 @@ void Personnage::move(const int direction)
         /*Jouer l'IDLE*/
         animator.PlayAnim(IDLE, 0.3f);
     }
-    //// </smasson>
+    // </smasson>
 
     // <smasson>
     /*Updater la direction de look*/
@@ -165,51 +144,135 @@ void Personnage::move(const int direction)
 
 void Personnage::moveDown()
 {
-    Sprite::move(0, 1 * GRAVITY_FORCE);
+    Sprite::move(dir.x, dir.y * GRAVITY_FORCE);
 }
 
 void Personnage::moveUp()
 {
-    Sprite::move(0, -1 * JUMP_FORCE);
+    Sprite::move(dir.x, -dir.y * JUMP_FORCE);
 }
-
-bool Personnage::IsJumping()
-{
-    return isJumping;
-}
-
 
 void Personnage::Jump()
 {
+    canJump = false;
     isJumping = true;
-    //clock.restart();
+    dir.x = 0;
+    dir.y = 1;
+    clock.restart();
 }
 
-void Personnage::Update()
+void platformer::Personnage::Jump(bool right)
 {
-    // <smasson>
+    canJump = false;
+    isJumping = true;
+    //Droite
+    if (right)
+    {
+        dir.x = cos(45);
+        dir.y = sin(45);
+    }
+    //Gauche
+    else
+    {
+        dir.x = -cos(45);
+        dir.y = sin(45);
+    }
+    clock.restart();
+}
+
+void platformer::Personnage::Update()
+{
     //Updater l'animateur
     animator.Update();
     //Updater la texture
     setTexture(animator.GetCurAnimTexture());
     setTextureRect(animator.GetCurAnimRect());
+}
 
-    //jupsection
-    if (isJumping && jumpTime.asSeconds() < clock.getElapsedTime().asSeconds())
-    {
-        isJumping = false;
-        clock.restart();
-    }
-    // </smasson>
-}
-void Personnage::Gravite()
+// <smasson>
+
+bool platformer::Personnage::CheckCollisions(const Direction dir, Sprite*(*tab)[15])
 {
-    //if (gravityTimer.getElapsedTime() > gravityTick)
-    //{
-    //	//if(!isJumping)
-    //	//	move(2); // On fait descendre le personnage
-    //	gravityTimer.restart();
-    //}
+    bool collides = false;
+    //Pour chaque tuile en x et en y
+    for (size_t x = 0; x < SceneNiveau1::NOMBRE_TUILES_X; ++x)
+    {
+        for (size_t y = 0; y < SceneNiveau1::NOMBRE_TUILES_Y; ++y)
+        {
+            //Si nous n'allons pas vers le bas et que nous n'allons pas vers le haut
+            if (dir != HAUT && dir != BAS)
+            {
+                //S'il y a une tuile
+                if (tab[x][y] != nullptr)
+                {
+                    switch (dir)
+                    {
+                    case DROITE:
+                        if (tab[x][y]->getGlobalBounds().intersects(getGlobalBounds()) && tab[x][y]->getPosition().y < getPosition().y && 
+                            tab[x][y]->getPosition().x > getPosition().x)
+                        {
+                            //Visuel temporaire
+                            tab[x][y]->setColor(Color::Black);
+                            collides = true;
+                        }
+                        //Pas de collision
+                        else
+                            tab[x][y]->setColor(Color::White);
+                        break;
+
+                    case GAUCHE:
+                        if (tab[x][y]->getGlobalBounds().intersects(getGlobalBounds()) && tab[x][y]->getPosition().y < getPosition().y &&
+                            tab[x][y]->getPosition().x < getPosition().x)
+                        {
+                            //Visuel temporaire
+                            tab[x][y]->setColor(Color::Black);
+                            collides = true;
+                        }
+                        //Pas de collision
+                        else
+                            tab[x][y]->setColor(Color::White);
+                        break;
+                    }
+                }
+            }
+            //Sinon, nous allons vers le bas ou vers le haut
+            else
+            {
+                if (tab[x][y] != nullptr)
+                {
+                    if (dir == BAS)
+                    {
+                        //S'il y a collision
+                        if (tab[x][y]->getGlobalBounds().intersects(getGlobalBounds()) && tab[x][y]->getPosition().y > getPosition().y
+                            && y + 1 <= 15 && tab[x][y + 1] == nullptr)
+                        {
+                            tab[x][y]->setColor(Color::Black);
+                            collides = true;
+                        }
+                        else
+                        {
+                            tab[x][y]->setColor(Color::White);
+                        }
+                    }
+                    else if (dir == HAUT)
+                    {
+                        //S'il y a collision
+                        if (tab[x][y]->getGlobalBounds().intersects(getGlobalBounds()) && tab[x][y]->getPosition().y < getPosition().y
+                            && y - 1 >= 0 && tab[x][y - 1] == nullptr)
+                        {
+                            tab[x][y]->setColor(Color::Black);
+                            collides = true;
+                        }
+                        else
+                            tab[x][y]->setColor(Color::White);
+                    }
+                }
+            }
+        }
+    }
+    return collides;
 }
+
+// </smasson>
 
 // </SBerube>

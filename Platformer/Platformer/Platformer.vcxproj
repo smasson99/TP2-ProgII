@@ -128,15 +128,6 @@
     <ClInclude Include="Textbox.h" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Ressources\Backgrounds\Layer0_0.png" />
-    <Image Include="Ressources\Backgrounds\Layer0_1.png" />
-    <Image Include="Ressources\Backgrounds\Layer0_2.png" />
-    <Image Include="Ressources\Backgrounds\Layer1_0.png" />
-    <Image Include="Ressources\Backgrounds\Layer1_1.png" />
-    <Image Include="Ressources\Backgrounds\Layer1_2.png" />
-    <Image Include="Ressources\Backgrounds\Layer2_0.png" />
-    <Image Include="Ressources\Backgrounds\Layer2_1.png" />
-    <Image Include="Ressources\Backgrounds\Layer2_2.png" />
     <Image Include="Ressources\Overlays\you_died.png" />
     <Image Include="Ressources\Overlays\you_lose.png" />
     <Image Include="Ressources\Overlays\you_win.png" />
@@ -313,6 +304,7 @@
     <Image Include="Ressources\Sprites\GEMS\orbs.png" />
     <Image Include="Ressources\Sprites\Player\Player.png" />
     <Image Include="Ressources\Sprites\Title.png" />
+    <Image Include="Ressources\Sprites\UI\Backgrounds\background_1.jpg" />
     <Image Include="Ressources\Sprites\UI\Backgrounds\BlackSquare.png" />
     <Image Include="Ressources\Tiles\BlockA0.png" />
     <Image Include="Ressources\Tiles\BlockA1.png" />

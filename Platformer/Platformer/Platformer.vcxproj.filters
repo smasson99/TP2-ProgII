@@ -13,9 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Fichiers de ressources\Backgrounds">
-      <UniqueIdentifier>{0a804482-a127-46d6-8ad4-f1324b9681c0}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Fichiers de ressources\Fonts">
       <UniqueIdentifier>{06a33a8c-a3e0-4650-b3b3-dfbadaaae40b}</UniqueIdentifier>
     </Filter>
@@ -304,33 +301,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Ressources\Backgrounds\Layer0_0.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer0_1.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer0_2.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer1_0.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer1_1.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer1_2.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer2_0.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer2_1.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
-    <Image Include="Ressources\Backgrounds\Layer2_2.png">
-      <Filter>Fichiers de ressources\Backgrounds</Filter>
-    </Image>
     <Image Include="Ressources\Overlays\you_died.png">
       <Filter>Fichiers de ressources\Overlays</Filter>
     </Image>
@@ -894,6 +864,9 @@
     </Image>
     <Image Include="Ressources\Sprites\Player\Player.png">
       <Filter>Fichiers de ressources\Sprites\Player</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\UI\Backgrounds\background_1.jpg">
+      <Filter>Fichiers de ressources\Sprites\UI\Backgrounds</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>
