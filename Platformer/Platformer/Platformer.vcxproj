@@ -93,6 +93,7 @@
     <ClCompile Include="AccountHandler.cpp" />
     <ClCompile Include="AccountManagement.cpp" />
     <ClCompile Include="AnimationShredder.cpp" />
+    <ClCompile Include="Collectible.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Personnage.cpp" />
@@ -113,6 +114,7 @@
     <ClInclude Include="AccountHandler.h" />
     <ClInclude Include="AccountManagement.h" />
     <ClInclude Include="AnimationShredder.h" />
+    <ClInclude Include="Collectible.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Personnage.h" />
