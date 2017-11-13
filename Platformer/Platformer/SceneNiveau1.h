@@ -5,6 +5,7 @@
 // <smasson>
 #include "Joueur.h"
 #include "Spawner.h"
+#include "Collectible.h"
 #include "BasicEnemy.h"
 #include "EnemyGreen.h"
 #include "EnemyGenerator.h"
@@ -72,6 +73,19 @@ namespace platformer
         const int NB_POSSIBLE_ENEMYS = 1;
         // </smasson>
         Joueur* joueur;
+
+		// <SBerube>
+		/* Pointage*/
+		int Score = 0;
+		/*Sprite des collectibles en flyweight*/
+		Sprite sCollectible;
+		Texture tCollectible;
+		/*Les collectibles en flyweight*/
+		static const int NB_COLLECTIBLES = 100;
+		Collectible greenGems[NB_COLLECTIBLES];
+		// </SBerube>
+
+		Personnage joueur;
 
         int interfaceCommande;
     };

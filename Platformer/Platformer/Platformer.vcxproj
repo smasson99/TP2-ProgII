@@ -88,13 +88,23 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AccountCreation.cpp" />
+    <ClCompile Include="AccountDelete.cpp" />
     <ClCompile Include="AccountHandler.cpp" />
     <ClCompile Include="AccountManagement.cpp" />
     <ClCompile Include="AnimationShredder.cpp" />
+<<<<<<< HEAD
     <ClCompile Include="BasicEnemy.cpp" />
     <ClCompile Include="CollisionHandler.cpp" />
     <ClCompile Include="EnemyGenerator.cpp" />
     <ClCompile Include="EnemyGreen.cpp" />
+=======
+<<<<<<< HEAD
+    <ClCompile Include="Collectible.cpp" />
+=======
+    <ClCompile Include="CollisionHandler.cpp" />
+>>>>>>> b7ae3dacfc3cb41e7ca86adc4ca8e4e1b9621218
+>>>>>>> 3cd60bfbd2a1b72274ee02a42e52ed5b1a38c80b
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Personnage.cpp" />
@@ -111,13 +121,22 @@
     <ClCompile Include="Textbox.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccountCreation.h" />
+    <ClInclude Include="AccountDelete.h" />
     <ClInclude Include="AccountHandler.h" />
     <ClInclude Include="AccountManagement.h" />
     <ClInclude Include="AnimationShredder.h" />
+<<<<<<< HEAD
+    <ClInclude Include="Collectible.h" />
+=======
     <ClInclude Include="CollisionHandler.h" />
+<<<<<<< HEAD
     <ClInclude Include="BasicEnemy.h" />
     <ClInclude Include="EnemyGenerator.h" />
     <ClInclude Include="EnemyGreen.h" />
+=======
+>>>>>>> b7ae3dacfc3cb41e7ca86adc4ca8e4e1b9621218
+>>>>>>> 3cd60bfbd2a1b72274ee02a42e52ed5b1a38c80b
     <ClInclude Include="Game.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Personnage.h" />

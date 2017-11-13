@@ -6,6 +6,10 @@
 #include "Login.h"
 #include "AccountManagement.h"
 // </smasson>
+// <SBerube>
+#include "AccountCreation.h"
+#include "AccountDelete.h"
+// </SBerube>
 
 using namespace platformer;
 
@@ -29,7 +33,7 @@ int Game::testTest()
 int Game::run()
 {
 	//deux enums et un pointeur de scene pour faire la manipulation de scène
-	Scene::scenes selecteurDeScene = Scene::scenes::NIVEAU1;
+	Scene::scenes selecteurDeScene = Scene::scenes::MENU_PRINCIPALE;
 	//Scene::scenes selecteurDeScene = Scene::scenes::GESTION_COMPTE;
 	Scene::scenes sceneEnRetour;
 	Scene* sceneActive = nullptr; //Pointeur de la super-classe, peut pointer sur n'imprte quelle scène
@@ -58,6 +62,20 @@ int Game::run()
                 sceneActive = new AccountManagement();
                 break;
                 // </smasson>
+				// <SBerube>
+			case Scene::scenes::CREATION_COMPTE:
+				sceneActive = new AccountCreation();
+				break;
+			case Scene::scenes::DELETE_COMPTE:
+				sceneActive = new AccountDelete();
+				break;
+			case Scene::scenes::MODIFIER_COMPTE:
+				sceneActive = new Login(true);
+				break;
+			case Scene::scenes::MODIFICATION:
+				sceneActive = new AccountCreation(true);
+				break;
+				// </SBerube>
 			case Scene::scenes::TITRE:
 				sceneActive = new SceneTitre();
 				break;

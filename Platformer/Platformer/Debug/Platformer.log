@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿  SceneNiveau1.cpp
 c:\users\smasson99\desktop\tp2-progii\platformer\platformer\personnage.h(52): warning C4091: 'static ' : ignoré à gauche de 'platformer::Personnage::Animations' quand aucune variable n'est déclarée
 c:\users\smasson99\desktop\tp2-progii\platformer\platformer\personnage.h(66): warning C4091: 'static ' : ignoré à gauche de 'platformer::Personnage::Direction' quand aucune variable n'est déclarée
@@ -14,5 +15,33 @@ c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(151
 c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(152): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
 c:\users\smasson99\desktop\tp2-progii\platformer\platformer\sceneniveau1.cpp(153): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
   Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.exe
+=======
+<<<<<<< HEAD
+﻿  SceneNiveau1.cpp
+d:\tp2-progii_vss\platformer\platformer\personnage.h(42): warning C4091: 'static ' : ignoré à gauche de 'platformer::Personnage::Animations' quand aucune variable n'est déclarée
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(76): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(84): warning C4305: 'argument' : troncation de 'double' à 'float'
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(95): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(100): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(109): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(114): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(122): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(127): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(137): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(140): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(144): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(147): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(150): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(156): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(159): warning C4244: 'argument' : conversion de '::size_t' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(176): warning C4244: 'argument' : conversion de 'unsigned int' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(178): warning C4244: 'argument' : conversion de 'double' en 'float', perte possible de données
+d:\tp2-progii_vss\platformer\platformer\sceneniveau1.cpp(200): warning C4244: 'argument' : conversion de 'float' en 'int', perte possible de données
+  Platformer.vcxproj -> D:\TP2-ProgII_vss\Platformer\Debug\Platformer.exe
+  Platformer.vcxproj -> D:\TP2-ProgII_vss\Platformer\Debug\Platformer.pdb (Partial PDB)
+=======
+﻿  Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.exe
+>>>>>>> 3cd60bfbd2a1b72274ee02a42e52ed5b1a38c80b
   Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.pdb (Partial PDB)
+>>>>>>> b7ae3dacfc3cb41e7ca86adc4ca8e4e1b9621218
   0 fichier(s) copié(s)

@@ -148,13 +148,22 @@ void AccountManagement::transitButton(int curBut)
     switch (curBut)
     {
     case CREATE:
-        
+		// <SBerube>
+		transitionVersScene = Scene::scenes::CREATION_COMPTE;
+		isRunning = false;
+		// </SBerube>
         break;
     case MODIFY:
-        
+		// <SBerube>
+		transitionVersScene = Scene::scenes::MODIFIER_COMPTE;
+		isRunning = false;
+		// </SBerube>
         break;
     case DELETE:
-        
+		// <SBerube>
+		transitionVersScene = Scene::scenes::DELETE_COMPTE;
+		isRunning = false;
+		// </SBerube>
         break;
     case RETURN_MENU:
         transitionVersScene = Scene::scenes::MENU_PRINCIPALE;

@@ -237,10 +237,20 @@
     <ClCompile Include="Joueur.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+<<<<<<< HEAD
+    <ClCompile Include="AccountCreation.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountDelete.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Collectible.cpp">
+=======
     <ClCompile Include="CollisionHandler.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Rigidbody.cpp">
+>>>>>>> b7ae3dacfc3cb41e7ca86adc4ca8e4e1b9621218
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="EnemyGenerator.cpp">
@@ -302,10 +312,20 @@
     <ClInclude Include="Joueur.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+<<<<<<< HEAD
+    <ClInclude Include="AccountCreation.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountDelete.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Collectible.h">
+=======
     <ClInclude Include="CollisionHandler.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Rigidbody.h">
+>>>>>>> b7ae3dacfc3cb41e7ca86adc4ca8e4e1b9621218
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="EnemyGenerator.h">
