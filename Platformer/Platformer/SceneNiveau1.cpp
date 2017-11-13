@@ -75,6 +75,61 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	
 	srand(time(NULL));
 	// <SBerube>
+	// Les collectibles
+	if (!tCollectible.loadFromFile("Ressources\\Sprites\\Gems\\collectible1.png"))
+	{
+		return false;
+	}
+	sCollectible.setTexture(tCollectible);
+	sCollectible.setScale(0.15, 0.15);
+	for (size_t i = 0; i < NB_COLLECTIBLES; i++)
+	{
+		greenGems[i] = Collectible(sCollectible);
+	}
+	// On place les collectibles à la main
+	for (size_t i = 0; i < 30; i++)
+	{
+		if (i > 25)
+		{
+			greenGems[i].Enable();
+			greenGems[i].setPosition(Vector2f(150 * (i - 25) - 50, 400));
+		}
+		else if (i > 20)
+		{
+			greenGems[i].Enable();
+			greenGems[i].setPosition(Vector2f(150 * (i - 20) - 50, 310));
+		}
+		else
+		{
+			if (i % 2 == 0)
+			{
+				if (i < 10)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(100 + 50 * i, 100));
+				}
+				else if (i < 20)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(150 + 55 * (i - 10), 230));
+				}
+			}
+			else
+			{
+				if (i < 10)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(100 + 50 * i, 60));
+				}
+				else if (i < 20)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(150 + 55 * (i - 10), 190));
+				}
+			}
+		}
+	}
+
 	for (size_t x = 0; x < NOMBRE_TUILES_X; ++x)
 	{
 		// Plafond
@@ -107,21 +162,9 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	grilleDeTuiles[NOMBRE_TUILES_X - 1][2] = nullptr;
 	grilleDeTuiles[NOMBRE_TUILES_X - 1][3] = nullptr;
 	// Acces 1er etage
-	//grilleDeTuiles[1][7] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[1][7]->setPosition(1 * TAILLE_TUILES_X, 7 * TAILLE_TUILES_Y);
-	//grilleDeTuiles[1][6] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[1][6]->setPosition(1 * TAILLE_TUILES_X, 6 * TAILLE_TUILES_Y);
-	//grilleDeTuiles[2][7] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[2][7]->setPosition(2 * TAILLE_TUILES_X, 7 * TAILLE_TUILES_Y);
 	grilleDeTuiles[1][4] = nullptr;
 	grilleDeTuiles[2][4] = nullptr;
 	// Acces 3e etage
-	//grilleDeTuiles[10][9] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[10][9]->setPosition(10 * TAILLE_TUILES_X, 9 * TAILLE_TUILES_Y);
-	//grilleDeTuiles[10][10] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[10][10]->setPosition(10 * TAILLE_TUILES_X, 10 * TAILLE_TUILES_Y);
-	//grilleDeTuiles[11][10] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[11][10]->setPosition(11 * TAILLE_TUILES_X, 10 * TAILLE_TUILES_Y);
 	grilleDeTuiles[11][8] = nullptr;
 	grilleDeTuiles[12][8] = nullptr;
 	// Acces 4e etage
@@ -129,11 +172,6 @@ bool SceneNiveau1::init(RenderWindow * const window)
 	grilleDeTuiles[2][11] = nullptr;
 	grilleDeTuiles[17][11] = nullptr;
 	grilleDeTuiles[18][11] = nullptr;
-	//grilleDeTuiles[NOMBRE_TUILES_X - 2][NOMBRE_TUILES_Y - 2] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[NOMBRE_TUILES_X - 2][NOMBRE_TUILES_Y - 2]->setPosition((NOMBRE_TUILES_X - 2) * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
-	//grilleDeTuiles[1][NOMBRE_TUILES_Y - 2] = new Sprite(tuilesRougesT[rand() % TUILES_ROUGES]);
-	//grilleDeTuiles[1][NOMBRE_TUILES_Y - 2]->setPosition(1 * TAILLE_TUILES_X, (NOMBRE_TUILES_Y - 2) * TAILLE_TUILES_Y);
-
 	//Position arbitraire pour le joueur en x, pas arbitraire en y (sur le plancher)
 	joueur.setPosition(150, window->getSize().y - TAILLE_TUILES_Y * 2);
 
@@ -249,6 +287,17 @@ void SceneNiveau1::update()
     // <smasson>
     spawner01.Update();
     // </smasson>
+	for (size_t i = 0; i < NB_COLLECTIBLES; i++)
+	{
+		if (greenGems[i].IsEnabled())
+		{
+			if (joueur.getGlobalBounds().intersects(greenGems[i].getIntrect()))
+			{
+				greenGems[i].Disable();
+				Score += 100;
+			}
+		}
+	}
 }
 
 void SceneNiveau1::draw()
@@ -272,6 +321,14 @@ void SceneNiveau1::draw()
     // <smasson>
     spawner01.Draw(mainWin);
     // </smasson>
+
+	// <SBerube>
+	for (size_t i = 0; i < NB_COLLECTIBLES; i++)
+	{
+		if(greenGems[i].IsEnabled())
+			greenGems[i].Draw(*mainWin);
+	}
+	// </SBerube>
 
 	mainWin->draw(joueur);
 	mainWin->display();

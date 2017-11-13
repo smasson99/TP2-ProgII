@@ -3,6 +3,7 @@
 #include "Scene.h"
 #include "Personnage.h"
 #include "Spawner.h"
+#include "Collectible.h"
 
 using namespace sf;
 
@@ -55,6 +56,17 @@ namespace platformer
         Spawner spawner01;
         Spawner spawner02;
         // </smasson>
+
+		// <SBerube>
+		/* Pointage*/
+		int Score = 0;
+		/*Sprite des collectibles en flyweight*/
+		Sprite sCollectible;
+		Texture tCollectible;
+		/*Les collectibles en flyweight*/
+		static const int NB_COLLECTIBLES = 100;
+		Collectible greenGems[NB_COLLECTIBLES];
+		// </SBerube>
 
 		Personnage joueur;
 		int interfaceCommande;

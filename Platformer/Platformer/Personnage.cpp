@@ -7,7 +7,7 @@ using namespace platformer;
 Personnage::Personnage() : persoRect(0, 0, TAILLE_RECT, TAILLE_RECT)
 {
 	// <SBerube>
-	isOnGround = false;
+	isOnGround = true;
 	isJumping = false;
 	jumpTime = milliseconds(100);
 	gravityTick = milliseconds(10);
@@ -62,66 +62,66 @@ bool Personnage::Init(const int limiteGauche, const int limiteDroite, const Stri
 // <SBerube>
 void Personnage::move(const int direction)
 {
-	bool collision = false;
-	Vector2f oldPosition = getPosition();
+	//bool collision = false;
+	//Vector2f oldPosition = getPosition();
 	//RectCollider oldCollider = collider;
 
 	// On fait d'abbord bouger le personnage pour savoir si c'est possible
 	// Droite
 	if (direction == 1)
 	{
-		Sprite::move(vitesse/4.0f, 0);
+		Sprite::move(4, 0);
 	}
 	// Gauche
 	else if (direction == -1)
 	{
-		Sprite::move(-vitesse / 4.0f, 0);
+		Sprite::move(-4, 0);
 	}
 
 	// Bas
 	else if(direction == 2)
 	{
-		Sprite::move(0, 1);
+		Sprite::move(0, 4);
 	}
 	// Haut
 	else if (direction == -2)
 	{
-		Sprite::move(0, -1);
+		Sprite::move(0, -4);
 	}
 
 
 	// Ici, on vérifie la collision entre le joueur et chaque tuile du jeu qui n'est pas vide.
-	for (size_t i = 0; i < 20; i++)
-	{
-		for (size_t j = 0; j < 15; j++)
-		{
-			if (SceneNiveau1::GetGrilleAt(i, j) != nullptr)
-			{
-				//if (collider.CollidesWith(Vector2f(SceneNiveau1::GetGrilleAt(i, j)->getPosition().x, SceneNiveau1::GetGrilleAt(i, j)->getPosition().y),
-				//	Vector2f(SceneNiveau1::GetGrilleAt(i, j)->getPosition().x + 20, SceneNiveau1::GetGrilleAt(i, j)->getPosition().y + 15)))
-				if(SceneNiveau1::GetGrilleAt(i, j)->getTextureRect().intersects(animator.GetCurAnimRect()))
-				{
-					collision = true;
-					if (direction == 2)
-					{
-						isOnGround = true;
-					}
-					else if (direction == -2)
-					{
-						isJumping = false;
-					}
-					
-				}
-			}
-		}
-	}
+	//for (size_t i = 0; i < 20; i++)
+	//{
+	//	for (size_t j = 0; j < 15; j++)
+	//	{
+	//		if (SceneNiveau1::GetGrilleAt(i, j) != nullptr)
+	//		{
+	//			//if (collider.CollidesWith(Vector2f(SceneNiveau1::GetGrilleAt(i, j)->getPosition().x, SceneNiveau1::GetGrilleAt(i, j)->getPosition().y),
+	//			//	Vector2f(SceneNiveau1::GetGrilleAt(i, j)->getPosition().x + 20, SceneNiveau1::GetGrilleAt(i, j)->getPosition().y + 15)))
+	//			if(SceneNiveau1::GetGrilleAt(i, j)->getTextureRect().intersects(animator.GetCurAnimRect()))
+	//			{
+	//				collision = true;
+	//				if (direction == 2)
+	//				{
+	//					isOnGround = true;
+	//				}
+	//				else if (direction == -2)
+	//				{
+	//					isJumping = false;
+	//				}
+	//				
+	//			}
+	//		}
+	//	}
+	//}
 
 	// Si il y a une collision avec un des tuiles du jeu, on annule tout le déplacement
-	if (collision)
-	{
-		setPosition(oldPosition);
+	//if (collision)
+	//{
+	//	setPosition(oldPosition);
 		//collider = oldCollider;
-	}
+	//}
 	// Sinon on effectue les animations associés au mouvement
 	//else
 	//{
