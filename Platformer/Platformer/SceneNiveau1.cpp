@@ -89,7 +89,61 @@ bool SceneNiveau1::init(RenderWindow * const window)
     srand(time(NULL));
 
     // <SBerube>
-    //Création + positionnement des tuiles
+	// Les collectibles
+	if (!tCollectible.loadFromFile("Ressources\\Sprites\\Gems\\collectible1.png"))
+	{
+		return false;
+	}
+	sCollectible.setTexture(tCollectible);
+	sCollectible.setScale(0.15, 0.15);
+	for (size_t i = 0; i < NB_COLLECTIBLES; i++)
+	{
+		greenGems[i] = Collectible(sCollectible);
+	}
+	// On place les collectibles à la main
+	for (size_t i = 0; i < 30; i++)
+	{
+		if (i > 25)
+		{
+			greenGems[i].Enable();
+			greenGems[i].setPosition(Vector2f(150 * (i - 25) - 50, 400));
+		}
+		else if (i > 20)
+		{
+			greenGems[i].Enable();
+			greenGems[i].setPosition(Vector2f(150 * (i - 20) - 50, 310));
+		}
+		else
+		{
+			if (i % 2 == 0)
+			{
+				if (i < 10)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(100 + 50 * i, 100));
+				}
+				else if (i < 20)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(150 + 55 * (i - 10), 230));
+				}
+			}
+			else
+			{
+				if (i < 10)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(100 + 50 * i, 60));
+				}
+				else if (i < 20)
+				{
+					greenGems[i].Enable();
+					greenGems[i].setPosition(Vector2f(150 + 55 * (i - 10), 190));
+				}
+			}
+		}
+	}
+
     for (size_t x = 0; x < NOMBRE_TUILES_X; ++x)
     {
         //Les lignes pleines
@@ -246,6 +300,17 @@ void SceneNiveau1::update()
     spawner02.Update();
     spawner03.Update();
     // </smasson>
+	for (size_t i = 0; i < NB_COLLECTIBLES; i++)
+	{
+		if (greenGems[i].IsEnabled())
+		{
+			if (joueur.getGlobalBounds().intersects(greenGems[i].getIntrect()))
+			{
+				greenGems[i].Disable();
+				Score += 100;
+			}
+		}
+	}
 }
 
 void SceneNiveau1::draw()
@@ -272,8 +337,16 @@ void SceneNiveau1::draw()
     spawner03.Draw(mainWin);
     // </smasson>
 
+	// <SBerube>
     mainWin->draw(*greenEnemy);
-    mainWin->draw(*joueur);
-    mainWin->display();
+	for (size_t i = 0; i < NB_COLLECTIBLES; i++)
+	{
+		if(greenGems[i].IsEnabled())
+			greenGems[i].Draw(*mainWin);
+	}
+	// </SBerube>
+
+	mainWin->draw(joueur);
+	mainWin->display();
 }
 
