@@ -38,9 +38,8 @@ namespace platformer
         virtual void Update();
         // </smasson>
 	protected:
-        static const int TAILLE_RECT = 64;
 
-		Texture texture;
+        static const int TAILLE_RECT = 64;
 
         // <smasson>
         static enum Animations
@@ -66,17 +65,17 @@ namespace platformer
             DROITE
         };
 
-        virtual bool CheckCollisions(const Direction dir, Sprite*(*tab)[15]);
+       Texture walkTexture;
+       Texture idleTexture;
 
-        Texture runAnimTexture;
-        Texture idleAnimTexture;
+        virtual bool CheckCollisions(const Direction dir, Sprite*(*tab)[15]);
 
         bool lookLeft;
 
         Vector2f dir;
 
-        const float SCALE_X = 0.05f;
-        const float SCALE_Y = 0.05f;
+        float scaleX = 0.05f;
+        float scaleY = 0.05f;
 
         ObjectAnimator animator;
 

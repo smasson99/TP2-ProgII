@@ -33,7 +33,7 @@ AnimationShredder* AnimationShredder::GetInstance()
 /// <param name="sheet">La spritesheet.</param>
 /// <returns>Pointeur de Vecteur de pointeur d'IntRects représentant les frames de l'animation
 /// découpées.</returns>
-vector<IntRect>* AnimationShredder::ShredSingleSheet(Texture sheet)
+vector<IntRect>* AnimationShredder::ShredSingleSheet(const Texture sheet)
 {
     /*Déclaration des variables de base*/
     int nbFrames = sheet.getSize().x / sheet.getSize().y;

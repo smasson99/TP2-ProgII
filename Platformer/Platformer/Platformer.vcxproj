@@ -91,7 +91,10 @@
     <ClCompile Include="AccountHandler.cpp" />
     <ClCompile Include="AccountManagement.cpp" />
     <ClCompile Include="AnimationShredder.cpp" />
+    <ClCompile Include="BasicEnemy.cpp" />
     <ClCompile Include="CollisionHandler.cpp" />
+    <ClCompile Include="EnemyGenerator.cpp" />
+    <ClCompile Include="EnemyGreen.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Joueur.cpp" />
     <ClCompile Include="Personnage.cpp" />
@@ -112,6 +115,9 @@
     <ClInclude Include="AccountManagement.h" />
     <ClInclude Include="AnimationShredder.h" />
     <ClInclude Include="CollisionHandler.h" />
+    <ClInclude Include="BasicEnemy.h" />
+    <ClInclude Include="EnemyGenerator.h" />
+    <ClInclude Include="EnemyGreen.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Joueur.h" />
     <ClInclude Include="Personnage.h" />

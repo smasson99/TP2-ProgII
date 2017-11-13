@@ -4,6 +4,8 @@
 
 using namespace platformer;
 
+Joueur* Joueur::instance = nullptr;
+
 platformer::Joueur::Joueur()
 {
     
@@ -11,6 +13,13 @@ platformer::Joueur::Joueur()
 
 platformer::Joueur::~Joueur()
 {
+}
+
+Joueur* platformer::Joueur::GetInstance()
+{
+    if (instance == nullptr)
+        instance = new Joueur();
+    return instance;
 }
 
 void Joueur::Update(int command, Sprite *(*tab)[15])

@@ -5,6 +5,9 @@
 // <smasson>
 #include "Joueur.h"
 #include "Spawner.h"
+#include "BasicEnemy.h"
+#include "EnemyGreen.h"
+#include "EnemyGenerator.h"
 #include <SFML/Audio.hpp>
 // </smasson>
 
@@ -59,13 +62,16 @@ namespace platformer
         /*Voici les spawners*/
         Spawner spawner01;
         Spawner spawner02;
+        Spawner spawner03;
         /*Musique d'ambiance*/
         sf::Music ambianceMusic;
-        /*Voici l'ensemble des ennemys et des ennemys inactifs*/
-        vector<Personnage> ennemys;
+        //Vecteur d'ennemis possibles
+        vector<BasicEnemy*> enemyModals;
+        EnemyGreen* greenEnemy;
+        vector<BasicEnemy*> enemys;
+        const int NB_POSSIBLE_ENEMYS = 1;
         // </smasson>
-
-        Joueur joueur;
+        Joueur* joueur;
 
         int interfaceCommande;
     };

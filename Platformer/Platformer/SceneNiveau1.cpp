@@ -44,6 +44,7 @@ Scene::scenes SceneNiveau1::run()
 
 bool SceneNiveau1::init(RenderWindow * const window)
 {
+    //Loading des tuiles
     for (int i = 0; i < TUILES_ROUGES; i++)
     {
         if (!tuilesRougesT[i].loadFromFile("Ressources\\Tiles\\BlockA" + std::to_string(i) + ".png"))
@@ -63,8 +64,9 @@ bool SceneNiveau1::init(RenderWindow * const window)
         return false;
     }
     // </smasson>
-    
-    if (!joueur.Init(0, window->getSize().x, "Ressources\\Sprites\\2_Knight\\_Walk\\Walk.png", "Ressources\\Sprites\\2_Knight\\_Idle\\Idle.png"))
+
+    joueur = Joueur::GetInstance();
+    if (!joueur->Init(0, window->getSize().x, "Ressources\\Sprites\\2_Knight\\_Walk\\Walk.png", "Ressources\\Sprites\\2_Knight\\_Idle\\Idle.png"))
     {
         return false;
     }
@@ -72,7 +74,7 @@ bool SceneNiveau1::init(RenderWindow * const window)
     // <smasson>
     //Visuel des spawners
     string spawnerPath = "Ressources\\Sprites\\GEMS\\orbs.png";
-    if (!spawner01.Init(spawnerPath) || !spawner02.Init(spawnerPath))
+    if (!spawner01.Init(spawnerPath) || !spawner02.Init(spawnerPath) || !spawner03.Init(spawnerPath))
     {
         return false;
     }
@@ -121,6 +123,15 @@ bool SceneNiveau1::init(RenderWindow * const window)
     // Entrée de la grotte
     grilleDeTuiles[NOMBRE_TUILES_X - 1][2] = nullptr;
     grilleDeTuiles[NOMBRE_TUILES_X - 1][3] = nullptr;
+    // SpawnPoint 1
+    grilleDeTuiles[3][1] = nullptr;
+    grilleDeTuiles[4][1] = nullptr;
+    // SpawnPoint 2
+    grilleDeTuiles[0][6] = nullptr;
+    grilleDeTuiles[0][7] = nullptr;
+    // SpawnPoint 3
+    grilleDeTuiles[NOMBRE_TUILES_X - 1][NOMBRE_TUILES_Y-3] = nullptr;
+    grilleDeTuiles[NOMBRE_TUILES_X - 1][NOMBRE_TUILES_Y-2] = nullptr;
     // Acces 1er etage
     grilleDeTuiles[1][4] = nullptr;
     grilleDeTuiles[2][4] = nullptr;
@@ -134,10 +145,46 @@ bool SceneNiveau1::init(RenderWindow * const window)
     grilleDeTuiles[18][11] = nullptr;
 
     //Position arbitraire pour le joueur en x, pas arbitraire en y (sur le plancher)
-    joueur.setPosition(700, 100);
+    joueur->setPosition(700, 100);
     // <smasson>
     //SetPos des spawners
-    spawner01.SetPosition(TAILLE_TUILES_X*3.5f, window->getSize().y - TAILLE_TUILES_Y*14.5);
+    spawner01.SetPosition(TAILLE_TUILES_X*4, window->getSize().y - TAILLE_TUILES_Y*14.5);
+    spawner02.SetPosition(TAILLE_TUILES_X/2, window->getSize().y - TAILLE_TUILES_Y*8);
+    spawner03.SetPosition(TAILLE_TUILES_X*19.5, window->getSize().y - TAILLE_TUILES_Y*2);
+    //Ajout des patrols points au spawner01
+    spawner01.AddPatrolPoint(Vector2f(spawner01.GetPosition().x + 200, spawner01.GetPosition().y));
+    spawner01.AddPatrolPoint(Vector2f(spawner01.GetPosition().x, spawner01.GetPosition().y));
+#pragma region nonFontionnelle
+    //Chargement des données
+    //EnemyGenerator::LoadData(&spawner01, 0, window->getSize().x, "Ressources\\Sprites\\2_Knight\\_Walk\\Walk.png", "Ressources\\Sprites\\2_Knight\\_Idle\\Idle.png");
+
+    ////Ajout des ennemis
+    //for (size_t i = 0; i < 50; ++i)
+    //{
+    //    enemys.push_back(EnemyGenerator::Generate(EnemyGenerator::EnemyType::GREEN_ENEMY));
+    //    //Init des ennemis
+    //    if (!enemys.at(i)->Init(0, window->getSize().x, "Ressources\\Sprites\\2_Knight\\_Walk\\Walk.png", "Ressources\\Sprites\\2_Knight\\_Idle\\Idle.png"))
+    //    {
+    //        return false;
+    //    }
+    //}
+#pragma endregion
+
+    //Init model vert
+    greenEnemy = new EnemyGreen(spawner01);
+    if (!greenEnemy->Init(0, window->getSize().x, "Ressources\\Sprites\\2_Knight\\_Walk\\Walk.png", "Ressources\\Sprites\\2_Knight\\_Idle\\Idle.png"))
+    {
+        return false;
+    }
+    greenEnemy->InitInfos();
+    enemyModals.push_back(greenEnemy);
+
+    //Transfert
+    //unmomentdonné
+    
+    //Spawns
+    //greenEnemy->Spawn();
+    greenEnemy->setPosition(spawner01.GetPosition());
 
     // </smasson>
     this->mainWin = window;
@@ -191,10 +238,14 @@ void SceneNiveau1::getInputs()
 void SceneNiveau1::update()
 {
     // <smasson>
+    //Update des ennemis
+    greenEnemy->Update(grilleDeTuiles);
     //Update du joueur
-    joueur.Update(interfaceCommande, grilleDeTuiles);
+    joueur->Update(interfaceCommande, grilleDeTuiles);
     //Update des ou du spawner
     spawner01.Update();
+    spawner02.Update();
+    spawner03.Update();
     // </smasson>
 }
 
@@ -218,9 +269,12 @@ void SceneNiveau1::draw()
 
     // <smasson>
     spawner01.Draw(mainWin);
+    spawner02.Draw(mainWin);
+    spawner03.Draw(mainWin);
     // </smasson>
 
-    mainWin->draw(joueur);
+    mainWin->draw(*greenEnemy);
+    mainWin->draw(*joueur);
     mainWin->display();
 }
 

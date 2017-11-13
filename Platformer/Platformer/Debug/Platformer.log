@@ -1,3 +1,7 @@
-﻿  Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.exe
+﻿  BasicEnemy.cpp
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\personnage.h(52): warning C4091: 'static ' : ignoré à gauche de 'platformer::Personnage::Animations' quand aucune variable n'est déclarée
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\personnage.h(66): warning C4091: 'static ' : ignoré à gauche de 'platformer::Personnage::Direction' quand aucune variable n'est déclarée
+c:\users\smasson99\desktop\tp2-progii\platformer\platformer\basicenemy.cpp(142): warning C4018: '<' : incompatibilité signed/unsigned
+  Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.exe
   Platformer.vcxproj -> C:\Users\smasson99\Desktop\TP2-ProgII\Platformer\Debug\Platformer.pdb (Partial PDB)
   0 fichier(s) copié(s)

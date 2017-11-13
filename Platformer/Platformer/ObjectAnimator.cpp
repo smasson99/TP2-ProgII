@@ -24,7 +24,7 @@ ObjectAnimator::~ObjectAnimator()
     delete textures;
 }
 
-void ObjectAnimator::AddAnim(Texture texture)
+void ObjectAnimator::AddAnim(const Texture texture)
 {
     AnimationShredder* instanceShredder = AnimationShredder::GetInstance();
     textures->push_back(texture);
@@ -76,7 +76,7 @@ Texture& ObjectAnimator::GetCurAnimTexture()
     return textures->at(curAnim);
 }
 // <SBerube>
-void ObjectAnimator::SetCurAnimRect(IntRect rect)
+void ObjectAnimator::SetCurAnimRect(const IntRect rect)
 {
 	anims->at(curAnim)->at(curFrame) = rect;
 }

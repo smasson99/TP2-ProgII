@@ -12,7 +12,7 @@ namespace platformer
     public:
         static AnimationShredder* GetInstance();
         ~AnimationShredder();
-       vector<IntRect>* ShredSingleSheet(Texture sheet);
+       vector<IntRect>* ShredSingleSheet(const Texture sheet);
     private:
         AnimationShredder();
         /*L'instance statique*/

@@ -35,29 +35,17 @@ Personnage::~Personnage()
 
 bool Personnage::Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath)
 {
-    // <smasson>
-    //Temporaire, retirer au rajout des anims:
-    if (!texture.loadFromFile(walkAnimPath))
-    {
+    if (!idleTexture.loadFromFile(idleAnimPath))
         return false;
-    }
-    //
-
-    if (!runAnimTexture.loadFromFile(walkAnimPath))
-    {
+    if (!walkTexture.loadFromFile(walkAnimPath))
         return false;
-    }
-    if (!idleAnimTexture.loadFromFile(idleAnimPath))
-    {
-        return false;
-    }
 
     /*Ici, l'ordre d'appel est important et est dépendant de l'enum: Animations*/
     /*IDLE = 0, RUN_LEFT = 1, RUN_RIGHT= 2, JUMP = 3, DIE = 4*/
 
-    animator.AddAnim(idleAnimTexture);
-    animator.AddAnim(runAnimTexture);
-    animator.AddAnim(runAnimTexture);
+    animator.AddAnim(Personnage::idleTexture);
+    animator.AddAnim(Personnage::walkTexture);
+    animator.AddAnim(Personnage::walkTexture);
 
     //On regarde à gauche en commençant
     lookLeft = true;
@@ -69,13 +57,12 @@ bool Personnage::Init(const int limiteGauche, const int limiteDroite, const Stri
     setTextureRect(animator.GetCurAnimRect());
     /*Setter l'origine (très important)*/
     setOrigin(animator.GetCurAnimRect().width / 2, animator.GetCurAnimRect().height / 2);
-    //Temporaire, enlever au rajout des anims
-    setTexture(texture);
-    setTextureRect(persoRect);
     // </smasson>
 
     this->limiteGauche = limiteGauche + TAILLE_RECT / 4;
     this->limiteDroite = limiteDroite - TAILLE_RECT / 4;
+
+    //AjustementsVisuels();
 
     return true;
 }
@@ -126,9 +113,9 @@ void Personnage::move(const int direction)
     // <smasson>
     /*Updater la direction de look*/
     if (lookLeft)
-        setScale(SCALE_X*-1, SCALE_Y);
+        setScale(scaleX*-1, scaleY);
     else
-        setScale(SCALE_X, SCALE_Y);
+        setScale(scaleX, scaleY);
 
     //Pour s'assurer de ne pas dépasser les limites de l'écran
     if (getPosition().x < limiteGauche)
