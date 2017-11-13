@@ -66,7 +66,7 @@ namespace platformer
         /*Musique d'ambiance*/
         sf::Music ambianceMusic;
         //Vecteur d'ennemis possibles
-        vector<BasicEnemy*> enemyModals;
+        vector<BasicEnemy*> currentEnemys;
         EnemyGreen* greenEnemy;
         vector<BasicEnemy*> enemys;
         const int NB_POSSIBLE_ENEMYS = 1;
