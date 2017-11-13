@@ -2,6 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include "Scene.h"
 #include "Personnage.h"
+// <smasson>
 #include "Spawner.h"
 #include "Collectible.h"
 
@@ -21,9 +22,11 @@ namespace platformer
 		void update();
 		void draw();
 		// <SBerube>
-		static Vector2i DeterminerTuileDe(float posX, float posY);
-		static Sprite* GetGrilleAt(int x, int y);
+		//static Vector2i DeterminerTuileDe(float posX, float posY);
+		//static Sprite* GetGrilleAt(int x, int y);
 		// </SBerube>
+        // <smasson>
+        // </smasson>
 
 	private:
 		
@@ -38,7 +41,7 @@ namespace platformer
 		/// Théoriquement la fenêtre pourrait être remplie de tuile de manière exacte (20 X 15 pour être précis, voir plus haut)
 		/// On a donc une grille de pointeurs null, et si un bloc doit être concétisé, alors il ne sera pas null.
 		/// </summary>
-		static Sprite* grilleDeTuiles[NOMBRE_TUILES_X][NOMBRE_TUILES_Y];
+		Sprite* grilleDeTuiles[NOMBRE_TUILES_X][NOMBRE_TUILES_Y];
 
 		/// <summary>
 		/// On a 7 tuiles rouges de base; alors on va toutes les utiliser, pour le moment.
@@ -55,6 +58,8 @@ namespace platformer
         /*Voici les spawners*/
         Spawner spawner01;
         Spawner spawner02;
+        /*Voici l'ensemble des ennemys et des ennemys inactifs*/
+        vector<Personnage> ennemys;
         // </smasson>
 
 		// <SBerube>
@@ -69,6 +74,7 @@ namespace platformer
 		// </SBerube>
 
 		Personnage joueur;
+
 		int interfaceCommande;
 	};
 }

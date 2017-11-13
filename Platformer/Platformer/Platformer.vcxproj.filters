@@ -187,6 +187,9 @@
     <Filter Include="Fichiers de ressources\Other">
       <UniqueIdentifier>{b99eb03b-fa1b-4203-903b-0c0687e2b5c0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Sprites\Player">
+      <UniqueIdentifier>{9fea5d21-78e5-4bea-b4f9-811f3fa17e7b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -237,6 +240,7 @@
     <ClCompile Include="Joueur.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="AccountCreation.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -244,6 +248,12 @@
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="Collectible.cpp">
+=======
+    <ClCompile Include="CollisionHandler.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Rigidbody.cpp">
+>>>>>>> b7ae3dacfc3cb41e7ca86adc4ca8e4e1b9621218
       <Filter>Fichiers sources</Filter>
     </ClCompile>
   </ItemGroup>
@@ -296,6 +306,7 @@
     <ClInclude Include="Joueur.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="AccountCreation.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
@@ -303,6 +314,12 @@
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="Collectible.h">
+=======
+    <ClInclude Include="CollisionHandler.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Rigidbody.h">
+>>>>>>> b7ae3dacfc3cb41e7ca86adc4ca8e4e1b9621218
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
   </ItemGroup>
@@ -894,6 +911,9 @@
     </Image>
     <Image Include="Ressources\Sprites\UI\Backgrounds\BlackSquare.png">
       <Filter>Fichiers de ressources\Sprites\UI\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\Player\Player.png">
+      <Filter>Fichiers de ressources\Sprites\Player</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>

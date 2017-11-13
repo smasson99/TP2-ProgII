@@ -4,14 +4,26 @@
 
 using namespace platformer;
 
+// <smasson>
+/*
+    Notes:
+    *Je vais temporairement rendre inactive les animations, pour pouvoir me concentrer sur les collisions
+
+    Animations:
+        1-Le joueur s'anime aux mouvements
+        status:inactif
+    Collisions:
+        1-Le joueur doit ne pas sortir de l'écran
+        status:actif
+        2-Le joueur doit ne pas traverser les blocs
+        status:non
+*/
+// </smasson>
+
 Personnage::Personnage() : persoRect(0, 0, TAILLE_RECT, TAILLE_RECT)
 {
-	// <SBerube>
-	isOnGround = true;
-	isJumping = false;
-	jumpTime = milliseconds(100);
-	gravityTick = milliseconds(10);
-	// </SBerube>
+    jumpTime = seconds(MAX_JUMP_TIME);
+    clock.restart();
 }
 
 Personnage::~Personnage()
@@ -21,6 +33,13 @@ Personnage::~Personnage()
 bool Personnage::Init(const int limiteGauche, const int limiteDroite, const String walkAnimPath, const String idleAnimPath)
 {
     // <smasson>
+    //Temporaire, retirer au rajout des anims:
+    if (!texture.loadFromFile(walkAnimPath))
+    {
+        return false;
+    }
+    //
+
     if (!runAnimTexture.loadFromFile(walkAnimPath))
     {
         return false;
@@ -32,7 +51,7 @@ bool Personnage::Init(const int limiteGauche, const int limiteDroite, const Stri
 
     /*Ici, l'ordre d'appel est important et est dépendant de l'enum: Animations*/
     /*IDLE = 0, RUN_LEFT = 1, RUN_RIGHT= 2, JUMP = 3, DIE = 4*/
-    /*//*/
+
     animator.AddAnim(idleAnimTexture);
     animator.AddAnim(runAnimTexture);
     animator.AddAnim(runAnimTexture);
@@ -46,178 +65,151 @@ bool Personnage::Init(const int limiteGauche, const int limiteDroite, const Stri
     setTexture(animator.GetCurAnimTexture());
     setTextureRect(animator.GetCurAnimRect());
     /*Setter l'origine (très important)*/
-	setOrigin(animator.GetCurAnimRect().width / 2, animator.GetCurAnimRect().height / 2);
+    setOrigin(animator.GetCurAnimRect().width / 2, animator.GetCurAnimRect().height / 2);
+    //Temporaire, enlever au rajout des anims
+    setTexture(texture);
+    setTextureRect(persoRect);
     // </smasson>
 
-	// <SBerube>
-	//collider = RectCollider(Vector2f(getPosition().x - (getScale().x * animator.GetCurAnimRect().width / 2), getPosition().y - (getScale().y * animator.GetCurAnimRect().height / 2)),
-	//                        Vector2f(getPosition().x + (getScale().x * animator.GetCurAnimRect().width / 2), getPosition().y + (getScale().y * animator.GetCurAnimRect().height / 2)));
-	// </SBerube>
-	this->limiteGauche = limiteGauche + TAILLE_RECT / 4;
-	this->limiteDroite = limiteDroite - TAILLE_RECT / 4;
+    this->limiteGauche = limiteGauche + TAILLE_RECT / 4;
+    this->limiteDroite = limiteDroite - TAILLE_RECT / 4;
 
-	return true;
+    return true;
 }
 
 // <SBerube>
 void Personnage::move(const int direction)
 {
-	//bool collision = false;
-	//Vector2f oldPosition = getPosition();
-	//RectCollider oldCollider = collider;
+    bool collision = false;
+    Vector2f oldPosition = getPosition();
 
-	// On fait d'abbord bouger le personnage pour savoir si c'est possible
-	// Droite
-	if (direction == 1)
-	{
-		Sprite::move(4, 0);
-	}
-	// Gauche
-	else if (direction == -1)
-	{
-		Sprite::move(-4, 0);
-	}
+    // On fait d'abbord bouger le personnage pour savoir si c'est possible
+    // Droite
+    if (direction == 1)
+    {
+        Sprite::move(vitesse / 4.0f, 0);
+    }
+    // Gauche
+    else if (direction == -1)
+    {
+        Sprite::move(-vitesse / 4.0f, 0);
+    }
 
-	// Bas
-	else if(direction == 2)
-	{
-		Sprite::move(0, 4);
-	}
-	// Haut
-	else if (direction == -2)
-	{
-		Sprite::move(0, -4);
-	}
+    // Ici, on vérifie la collision entre le joueur et chaque tuile du jeu qui n'est pas vide.
+    /*for (size_t i = 0; i < 20; i++)
+    {
+        for (size_t j = 0; j < 15; j++)
+        {
+            if (SceneNiveau1::GetGrilleAt(i, j) != nullptr)
+            {
+                if (SceneNiveau1::GetGrilleAt(i, j)->getTextureRect().intersects(animator.GetCurAnimRect()))
+                {
+                    collision = true;
+                    if (direction == 2)
+                    {
+                        isOnGround = true;
+                    }
+                    else if (direction == -2)
+                    {
+                        isJumping = false;
+                    }
 
+                }
+            }
+        }
+    }*/
+    if (direction == 1)
+    {
+        // <smasson>
+        /*Jouer à droite(anim)*/
+        animator.PlayAnim(RUN_RIGHT, 0.1f);
+        lookLeft = false;
+        // </smasson>
+    }
+    // Gauche
+    else if (direction == -1)
+    {
+        // <smasson>
+        /*Jouer à gauche(anim)*/
+        animator.PlayAnim(RUN_LEFT, 0.1f);
+        lookLeft = true;
+        // </smasson>
+    }
+    // <smasson>
+    /*Sinon, nous ne bougeons pas, donc aller en Idle*/
+    else
+    {
+        /*Jouer l'IDLE*/
+        animator.PlayAnim(IDLE, 0.3f);
+    }
+    //// </smasson>
 
-	// Ici, on vérifie la collision entre le joueur et chaque tuile du jeu qui n'est pas vide.
-	//for (size_t i = 0; i < 20; i++)
-	//{
-	//	for (size_t j = 0; j < 15; j++)
-	//	{
-	//		if (SceneNiveau1::GetGrilleAt(i, j) != nullptr)
-	//		{
-	//			//if (collider.CollidesWith(Vector2f(SceneNiveau1::GetGrilleAt(i, j)->getPosition().x, SceneNiveau1::GetGrilleAt(i, j)->getPosition().y),
-	//			//	Vector2f(SceneNiveau1::GetGrilleAt(i, j)->getPosition().x + 20, SceneNiveau1::GetGrilleAt(i, j)->getPosition().y + 15)))
-	//			if(SceneNiveau1::GetGrilleAt(i, j)->getTextureRect().intersects(animator.GetCurAnimRect()))
-	//			{
-	//				collision = true;
-	//				if (direction == 2)
-	//				{
-	//					isOnGround = true;
-	//				}
-	//				else if (direction == -2)
-	//				{
-	//					isJumping = false;
-	//				}
-	//				
-	//			}
-	//		}
-	//	}
-	//}
+    // <smasson>
+    /*Updater la direction de look*/
+    if (lookLeft)
+        setScale(SCALE_X*-1, SCALE_Y);
+    else
+        setScale(SCALE_X, SCALE_Y);
 
-	// Si il y a une collision avec un des tuiles du jeu, on annule tout le déplacement
-	//if (collision)
-	//{
-	//	setPosition(oldPosition);
-		//collider = oldCollider;
-	//}
-	// Sinon on effectue les animations associés au mouvement
-	//else
-	//{
-	//	if (direction == 1)
-	//	{
-	//		// <smasson>
-	//		/*Jouer à droite(anim)*/
-	//		animator.PlayAnim(RUN_RIGHT, 0.1f);
-	//		lookLeft = false;
-	//		// </smasson>
-	//	}
-	//	// Gauche
-	//	else if (direction == -1)
-	//	{
-	//		// <smasson>
-	//		/*Jouer à gauche(anim)*/
-	//		animator.PlayAnim(RUN_LEFT, 0.1f);
-	//		lookLeft = true;
-	//		// </smasson>
-	//	}
-	//	// <smasson>
-	//	/*Sinon, nous ne bougeons pas, donc aller en Idle*/
-	//	else
-	//	{
-	//		/*Jouer l'IDLE*/
-	//		animator.PlayAnim(IDLE, 0.3f);
-	//	}
-	//	// </smasson>
-
-	//}
-	// <smasson>
-	/*Updater la direction de look*/
-	if (lookLeft)
-		setScale(SCALE_X*-1, SCALE_Y);
-	else
-		setScale(SCALE_X, SCALE_Y);
-
-	//Test sur les limites de l'écran
-	if (getPosition().x < limiteGauche)
-	{
-		setPosition(limiteGauche, getPosition().y);
-	}
-	else if (getPosition().x > limiteDroite)
-	{
-		setPosition(limiteDroite, getPosition().y);
-	}
-	// </smasson>
-	// On remet le collider sur le joueur après son déplacement
-	//collider = RectCollider(Vector2f(getPosition().x - getScale().x * animator.GetCurAnimRect().width / 2, getPosition().y - getScale().y * animator.GetCurAnimRect().height / 2),
-		//Vector2f(getPosition().x + getScale().x * animator.GetCurAnimRect().width / 2, getPosition().y + getScale().y * animator.GetCurAnimRect().height / 2));
-
+    //Pour s'assurer de ne pas dépasser les limites de l'écran
+    if (getPosition().x < limiteGauche)
+    {
+        setPosition(limiteGauche, getPosition().y);
+    }
+    else if (getPosition().x > limiteDroite)
+    {
+        setPosition(limiteDroite, getPosition().y);
+    }
+    // </smasson>
 }
+
+void Personnage::moveDown()
+{
+    Sprite::move(0, 1 * GRAVITY_FORCE);
+}
+
+void Personnage::moveUp()
+{
+    Sprite::move(0, -1 * JUMP_FORCE);
+}
+
+bool Personnage::IsJumping()
+{
+    return isJumping;
+}
+
 
 void Personnage::Jump()
 {
-	if (isOnGround)
-	{
-		isJumping = true;
-		timerAfterJump.restart();
-	}
+    isJumping = true;
+    //clock.restart();
 }
 
 void Personnage::Update()
 {
+    // <smasson>
+    //Updater l'animateur
+    animator.Update();
+    //Updater la texture
+    setTexture(animator.GetCurAnimTexture());
+    setTextureRect(animator.GetCurAnimRect());
 
-	if (isJumping)
-	{
-		if (timerAfterJump.getElapsedTime() < jumpTime)
-		{
-			move(-2); // On fait monter le personnage
-		}
-		else
-		{
-			isJumping = false;
-		}
-	}
-	else if (!isOnGround)
-	{
-		Gravite();
-	}
-	// <smasson>
-	//Updater l'animateur
-	animator.Update();
-	//Updater la texture
-	//setTexture(animator.GetCurAnimTexture());
-	//setTextureRect(animator.GetCurAnimRect());
-	// </smasson>
+    //jupsection
+    if (isJumping && jumpTime.asSeconds() < clock.getElapsedTime().asSeconds())
+    {
+        isJumping = false;
+        clock.restart();
+    }
+    // </smasson>
 }
 void Personnage::Gravite()
 {
-	if (gravityTimer.getElapsedTime() > gravityTick)
-	{
-		//if(!isJumping)
-		//	move(2); // On fait descendre le personnage
-		gravityTimer.restart();
-	}
+    //if (gravityTimer.getElapsedTime() > gravityTick)
+    //{
+    //	//if(!isJumping)
+    //	//	move(2); // On fait descendre le personnage
+    //	gravityTimer.restart();
+    //}
 }
 
 // </SBerube>
