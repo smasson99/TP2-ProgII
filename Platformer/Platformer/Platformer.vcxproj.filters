@@ -427,27 +427,6 @@
     <Image Include="Ressources\Sprites\1_TROLL\HURT\HURT_006.png">
       <Filter>Fichiers de ressources\Sprites\1_Troll\Hurt</Filter>
     </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_000.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_001.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_002.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_003.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_004.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_005.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\IDLE\IDLE_006.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
-    </Image>
     <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_000.png">
       <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
     </Image>
@@ -468,27 +447,6 @@
     </Image>
     <Image Include="Ressources\Sprites\1_TROLL\JUMP\JUMP_006.png">
       <Filter>Fichiers de ressources\Sprites\1_Troll\Jump</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_000.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_001.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_002.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_003.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_004.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_005.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
-    </Image>
-    <Image Include="Ressources\Sprites\1_TROLL\WALK\WALK_006.png">
-      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
     </Image>
     <Image Include="Ressources\Sprites\1_TROLL\RUN\RUN_000.png">
       <Filter>Fichiers de ressources\Sprites\1_Troll\Run</Filter>
@@ -885,6 +843,12 @@
     </Image>
     <Image Include="Ressources\Sprites\UI\Backgrounds\background_1.jpg">
       <Filter>Fichiers de ressources\Sprites\UI\Backgrounds</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\IDLE\idle.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Idle</Filter>
+    </Image>
+    <Image Include="Ressources\Sprites\1_TROLL\WALK\walk.png">
+      <Filter>Fichiers de ressources\Sprites\1_Troll\Walk</Filter>
     </Image>
   </ItemGroup>
   <ItemGroup>

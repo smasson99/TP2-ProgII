@@ -172,19 +172,18 @@ bool SceneNiveau1::init(RenderWindow * const window)
 
     //Init model vert
     greenEnemy = new EnemyGreen(spawner01);
-    if (!greenEnemy->Init(0, window->getSize().x, "Ressources\\Sprites\\2_Knight\\_Walk\\Walk.png", "Ressources\\Sprites\\2_Knight\\_Idle\\Idle.png"))
+    if (!greenEnemy->Init(0, window->getSize().x, "Ressources\\Sprites\\1_Troll\\walk\\walk.png", "Ressources\\Sprites\\1_TROLL\\Idle\\idle.png"))
     {
         return false;
     }
     greenEnemy->InitInfos();
-    enemyModals.push_back(greenEnemy);
+    currentEnemys.push_back(greenEnemy);
 
     //Transfert
     //unmomentdonné
     
     //Spawns
-    //greenEnemy->Spawn();
-    greenEnemy->setPosition(spawner01.GetPosition());
+    greenEnemy->Spawn();
 
     // </smasson>
     this->mainWin = window;

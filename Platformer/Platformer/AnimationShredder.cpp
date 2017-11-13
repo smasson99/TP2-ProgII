@@ -55,4 +55,25 @@ vector<IntRect>* AnimationShredder::ShredSingleSheet(const Texture sheet)
     }
     return frames;
 }
+vector<IntRect>* platformer::AnimationShredder::ShredSingleSheet(const Texture sheet, float widthT, float heightT)
+{
+    /*Déclaration des variables de base*/
+    int nbFrames = sheet.getSize().x / widthT;
+    int height = sheet.getSize().y;
+    /*Déclaration du vecteur de retour*/
+    vector<IntRect>* frames = new vector<IntRect>;
+    /*Découpage des frames*/
+    for (size_t i = 0; i < nbFrames; ++i)
+    {
+        IntRect curFrame;
+
+        curFrame.left = widthT * i; /*Multiplié par la colonne courante*/
+        curFrame.top = height * 0; /*Qu'une seule ligne*/
+        curFrame.width = widthT; /*ma largeur*/
+        curFrame.height = height; /*ma hauteur*/
+
+        frames->push_back(curFrame); /*Ajout du résultat*/
+    }
+    return frames;
+}
 // </smasson>
